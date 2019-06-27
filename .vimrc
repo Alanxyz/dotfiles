@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'yuttie/inkstained-vim'            " Tema para escribir
   Plug 'scrooloose/nerdtree'              " Arbol de directorios
   Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
+  Plug 'airblade/vim-gitgutter'           " Cambios con git
   Plug 'ap/vim-buftabline'                " Barra de buffers
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
   Plug 'mattn/emmet-vim'                  " Abrevieturas html
