@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'yuttie/inkstained-vim'            " Tema para escribir
   Plug 'scrooloose/nerdtree'              " Arbol de directorios
   Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
-  Plug 'ap/vim-buftabline'                " Barra superior
+  Plug 'ap/vim-buftabline'                " Barra de buffers
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
   Plug 'mattn/emmet-vim'                  " Abrevieturas html
   Plug 'jiangmiao/auto-pairs'             " Cerrado de llaves, parentecis...
@@ -66,7 +66,6 @@ function! Tab_Or_Complete()
     return "\<Tab>"
   endif
 endfunction
-
 
 " 5 --------------------------------------------------------------------------
 
