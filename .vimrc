@@ -3,21 +3,21 @@
 " ===================
 
 " 1) Plugins
-" 2) Opciones de vim
+" 2) Opciones de Vim
 " 3) Opciones visuales
-" 4) Autocompletado inteligente
-" 5) Definicion de atajos
+" 4) Autocompletado
+" 5) Atajos de teclado
 
 " 1 --------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
   Plug 'mileszs/ack.vim'                  " Buscador avanzado
-  Plug 'yuttie/hydrangea-vim'             " Tema para programar
-  Plug 'yuttie/inkstained-vim'            " Tema para escribir
+  Plug 'rafalbromirski/vim-aurora'        " Tema para codigo
+  Plug 'vim-airline/vim-airline'          " Barra inferior
+  Plug 'rafalbromirski/vim-airlineish'    " Tema para barra
   Plug 'scrooloose/nerdtree'              " Arbol de directorios
   Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
   Plug 'airblade/vim-gitgutter'           " Cambios con git
-  Plug 'ap/vim-buftabline'                " Barra de buffers
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
   Plug 'mattn/emmet-vim'                  " Abrevieturas html
   Plug 'jiangmiao/auto-pairs'             " Cerrado de llaves, parentecis...
@@ -46,7 +46,7 @@ set undolevels=1000
 set backspace=indent,eol,start
 set noswapfile
 set nobackup
-set encoding=utf-8
+set encoding=UTF-8
 set hidden
 set nowrap
 set showmatch
@@ -56,7 +56,11 @@ set noshowmode
 
 set background=dark
 set termguicolors
-color hydrangea 
+color aurora
+let g:airline_theme = 'airlineish'
+let g:airline_powerline_fonts = 1 
+let g:airline#extensions#tabline#enabled = 1
+let g:indentLine_char = '┊'
 
 " 4 --------------------------------------------------------------------------
 
@@ -75,5 +79,5 @@ nnoremap ,          :Ack!<Space>
 nnoremap <Tab>      :bn<CR>
 nnoremap <S-Tab>    :bp<CR>
 imap     <S-Tab>    <C-y>,
-nnoremap <F2>       :NERDTreeToggle<CR>
+nnoremap <F2>       :NERDTreeFocus<CR>
 nnoremap <F8>       :TagbarOpen<CR><C-w>l
