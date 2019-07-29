@@ -46,7 +46,8 @@ set undolevels=1000
 set backspace=indent,eol,start
 set noswapfile
 set nobackup
-set encoding=UTF-8
+set encoding=utf-8
+set fileformat=unix
 set hidden
 set nowrap
 set showmatch
@@ -57,6 +58,7 @@ set noshowmode
 set background=dark
 set termguicolors
 color aurora
+hi Normal guibg=#000000 ctermbg=NONE
 let g:airline_theme = 'airlineish'
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#enabled = 1
