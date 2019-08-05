@@ -12,11 +12,9 @@
 
 call plug#begin('~/.vim/plugged')
   Plug 'mileszs/ack.vim'                  " Buscador avanzado
-  Plug 'rafalbromirski/vim-aurora'        " Tema para codigo
-  Plug 'vim-airline/vim-airline'          " Barra inferior
-  Plug 'rafalbromirski/vim-airlineish'    " Tema para barra
   Plug 'scrooloose/nerdtree'              " Arbol de directorios
   Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
+  Plug 'tpope/vim-fugitive'               " Git desde Vim
   Plug 'airblade/vim-gitgutter'           " Cambios con git
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
   Plug 'mattn/emmet-vim'                  " Abrevieturas html
@@ -56,8 +54,6 @@ set noshowmode
 " 3 --------------------------------------------------------------------------
 
 set background=dark
-set termguicolors
-color aurora
 hi Normal guibg=#000000 ctermbg=NONE
 let g:airline_theme = 'airlineish'
 let g:airline_powerline_fonts = 1 
