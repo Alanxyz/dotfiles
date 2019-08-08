@@ -14,10 +14,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'mileszs/ack.vim'                  " Buscador avanzado
   Plug 'scrooloose/nerdtree'              " Arbol de directorios
   Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
+  Plug 'NLKNguyen/papercolor-theme'       " Esquema de color
   Plug 'tpope/vim-fugitive'               " Git desde Vim
   Plug 'airblade/vim-gitgutter'           " Cambios con git
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
-  Plug 'mattn/emmet-vim'                  " Abrevieturas html
+  Plug 'mattn/emmet-vim'                  " Abreviaturas XML
   Plug 'jiangmiao/auto-pairs'             " Cerrado de llaves, parentecis...
 call plug#end()
 
@@ -54,11 +55,8 @@ set noshowmode
 " 3 --------------------------------------------------------------------------
 
 set background=dark
+colorscheme PaperColor
 hi Normal guibg=#000000 ctermbg=NONE
-let g:airline_theme = 'airlineish'
-let g:airline_powerline_fonts = 1 
-let g:airline#extensions#tabline#enabled = 1
-let g:indentLine_char = '┊'
 
 " 4 --------------------------------------------------------------------------
 
@@ -72,8 +70,10 @@ endfunction
 
 " 5 --------------------------------------------------------------------------
 
-inoremap <Tab>      <C-R>=Tab_Or_Complete()<CR>
+imap     ñ          <Esc>
+vmap     ñ          <Esc>
 nnoremap ,          :Ack!<Space>
+inoremap <Tab>      <C-R>=Tab_Or_Complete()<CR>
 nnoremap <Tab>      :bn<CR>
 nnoremap <S-Tab>    :bp<CR>
 imap     <S-Tab>    <C-y>,
