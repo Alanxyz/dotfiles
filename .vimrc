@@ -11,8 +11,9 @@
 " 1 --------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
-  Plug 'NLKNguyen/papercolor-theme'       " Esquema de color
-  Plug 'mileszs/ack.vim'                  " Buscador avanzado
+  Plug 'jeffkreeftmeijer/vim-dim'         " Esquema de color
+  Plug 'mileszs/ack.vim'                  " Buscador de codigo
+  Plug 'ctrlpvim/ctrlp.vim'               " Buscador de archivos
   Plug 'scrooloose/nerdtree'              " Arbol de directorios
   Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
   Plug 'tpope/vim-fugitive'               " Git desde Vim
@@ -20,6 +21,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
   Plug 'mattn/emmet-vim'                  " Abreviaturas XML
   Plug 'jiangmiao/auto-pairs'             " Cerrado de llaves, parentecis...
+
+  Plug 'Shougo/deoplete.nvim'             " Autocompletado inteligente {
+  Plug 'roxma/nvim-yarp'                  
+  Plug 'roxma/vim-hug-neovim-rpc'         " }
 call plug#end()
 
 " 2 --------------------------------------------------------------------------
@@ -51,20 +56,22 @@ set hidden
 set nowrap
 set showmatch
 set noshowmode
+set wildignore+=node_modules
 
 " 3 --------------------------------------------------------------------------
 
-set termguicolors
 set bg=dark
-color PaperColor
+colorscheme dim
 hi Normal guibg=#000000 ctermbg=NONE
+let g:rehash256 = 1
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_setColors = 0
+let NERDTreeMinimalUI = 1
+let g:deoplete#enable_at_startup = 1
 
 " 4 --------------------------------------------------------------------------
-
+ 
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
     return "\<C-N>"
@@ -75,13 +82,9 @@ endfunction
 
 " 5 --------------------------------------------------------------------------
 
+let g:ctrlp_map =   ',,'
 imap     ñ          <Esc>
 vmap     ñ          <Esc>
-nnoremap ,          :Ack!<Space>
 inoremap <Tab>      <C-R>=Tab_Or_Complete()<CR>
 nnoremap <Tab>      :bn<CR>
 nnoremap <S-Tab>    :bp<CR>
-imap     <S-Tab>    <C-y>,
-nnoremap <F2>       :NERDTreeFocus<CR>
-nnoremap <F5>       :read !python3 % > /dev/null<CR>
-nnoremap <F8>       :TagbarOpen<CR><C-w>l
