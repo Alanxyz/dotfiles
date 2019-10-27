@@ -5,8 +5,7 @@
 " 1) Plugins
 " 2) Opciones de Vim
 " 3) Opciones visuales
-" 4) Autocompletado
-" 5) Atajos de teclado
+" 4) Atajos de teclado
 
 " 1 --------------------------------------------------------------------------
 
@@ -23,6 +22,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'             " Cerrado de llaves, parentecis...
 
   Plug 'Shougo/deoplete.nvim'             " Autocompletado inteligente {
+  Plug 'ervandew/supertab'
   Plug 'roxma/nvim-yarp'                  
   Plug 'roxma/vim-hug-neovim-rpc'         " }
 call plug#end()
@@ -46,6 +46,8 @@ set smartindent
 set smarttab
 set softtabstop=2
 set ruler	
+set foldmethod=indent
+set nofoldenable
 set undolevels=1000
 set backspace=indent,eol,start
 set noswapfile
@@ -64,27 +66,15 @@ set bg=dark
 colorscheme dim
 hi Normal guibg=#000000 ctermbg=NONE
 let g:rehash256 = 1
-let g:indentLine_char = ''
-let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let NERDTreeMinimalUI = 1
 let g:deoplete#enable_at_startup = 1
 
 " 4 --------------------------------------------------------------------------
- 
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
-
-" 5 --------------------------------------------------------------------------
 
 let g:ctrlp_map =   ',,'
+let g:SuperTabDefaultCompletionType = '<C-n>'
 imap     ñ          <Esc>
 vmap     ñ          <Esc>
-inoremap <Tab>      <C-R>=Tab_Or_Complete()<CR>
 nnoremap <Tab>      :bn<CR>
 nnoremap <S-Tab>    :bp<CR>
