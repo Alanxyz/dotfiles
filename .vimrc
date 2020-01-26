@@ -11,16 +11,11 @@
 
 call plug#begin('~/.vim/plugged')
   Plug 'jeffkreeftmeijer/vim-dim'         " Esquema de color
-  Plug 'mileszs/ack.vim'                  " Buscador de codigo
-  Plug 'ctrlpvim/ctrlp.vim'               " Buscador de archivos
-  Plug 'scrooloose/nerdtree'              " Arbol de directorios
-  Plug 'Yggdroot/indentLine'              " Lineas guia para alineacion
   Plug 'tpope/vim-fugitive'               " Git desde Vim
   Plug 'airblade/vim-gitgutter'           " Cambios con git
   Plug 'sheerun/vim-polyglot'             " Lenguajes extra
   Plug 'mattn/emmet-vim'                  " Abreviaturas XML
   Plug 'jiangmiao/auto-pairs'             " Cerrado de llaves, parentecis...
-
   Plug 'Shougo/deoplete.nvim'             " Autocompletado inteligente {
   Plug 'ervandew/supertab'
   Plug 'roxma/nvim-yarp'                  
@@ -30,6 +25,7 @@ call plug#end()
 " 2 --------------------------------------------------------------------------
 
 set number
+set relativenumber
 set linebreak
 set showbreak=+++
 set textwidth=100
@@ -47,6 +43,7 @@ set smarttab
 set softtabstop=2
 set ruler	
 set foldmethod=indent
+set foldnestmax=2
 set nofoldenable
 set undolevels=1000
 set backspace=indent,eol,start
@@ -58,21 +55,28 @@ set hidden
 set nowrap
 set showmatch
 set noshowmode
-set wildignore+=node_modules
+set path=**
+set wildignore+=node_modules,__pycache__
+set wildmenu
 
 " 3 --------------------------------------------------------------------------
 
 set bg=dark
 colorscheme dim
 hi Normal guibg=#000000 ctermbg=NONE
+hi CursorLine       cterm=NONE ctermbg=black
+hi GitGutterAdd     ctermfg=2
+hi GitGutterDelete  ctermfg=1
+hi GitGutterChange  ctermfg=3
 let g:rehash256 = 1
-let g:indentLine_showFirstIndentLevel = 1
-let NERDTreeMinimalUI = 1
 let g:deoplete#enable_at_startup = 1
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_liststyle = 3
 
 " 4 --------------------------------------------------------------------------
 
-let g:ctrlp_map =   ',,'
 let g:SuperTabDefaultCompletionType = '<C-n>'
 imap     ñ          <Esc>
 vmap     ñ          <Esc>
