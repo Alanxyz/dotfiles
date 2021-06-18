@@ -5,13 +5,13 @@
 " [Plugins]
 
 call plug#begin('~/.vim/plugged')
-  Plug 'preservim/nerdtree'
+  Plug 'jeffkreeftmeijer/vim-dim'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
-  Plug 'jiangmiao/auto-pairs'
   Plug 'codota/tabnine-vim'
-  Plug 'arzg/vim-colors-xcode'
+	Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " [Opciones de Vim]
@@ -41,12 +41,7 @@ set shortmess+=c
 
 " [Opciones visuales]
 
-set bg=light
-colorscheme xcodelight
-
-let g:rehash256 = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeMinimalMenu = 1
+colorscheme dim
 
 " [Manejo de archivos]
 
