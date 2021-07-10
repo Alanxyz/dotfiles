@@ -6,8 +6,8 @@ Xft.antialias: true
 *.cursorColor:  #ffffff
 
 ! black
-*.color0:       #141414
-*.color8:       #141414
+*.color0:       #333333
+*.color8:       #333333
 
 ! red
 *.color1:       #a5a5a5
