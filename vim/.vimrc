@@ -1,6 +1,7 @@
 " =====================
 "  Vim - configuracion
 " =====================
+
 " [Plugins]
 
 call plug#begin('~/.vim/plugged')
@@ -8,13 +9,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'junegunn/goyo.vim'
 
-	Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'codota/tabnine-vim'
+  " Plug 'tpope/vim-fugitive'
+  " Plug 'airblade/vim-gitgutter'
+  " Plug 'codota/tabnine-vim'
 
-	Plug 'sirver/ultisnips'
-	Plug 'lervag/vimtex'
-	Plug 'KeitaNakamura/tex-conceal.vim'
+  Plug 'brennier/quicktex'
+  Plug 'lervag/vimtex'
+  Plug 'KeitaNakamura/tex-conceal.vim'
 call plug#end()
 
 " [Opciones generales]
@@ -29,10 +30,11 @@ set number
 set wildmenu
 
 set autoindent
+set expandtab
+set softtabstop=2
 set shiftwidth=2
 set smartindent
 set smarttab
-set softtabstop=2
 
 set nobackup
 set nowritebackup
@@ -51,10 +53,6 @@ nnoremap <silent> <S-Tab>    :bp<CR>
 set wildignore+=**/node_modules/** 
 
 " [Opciones para documentos]
-
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
