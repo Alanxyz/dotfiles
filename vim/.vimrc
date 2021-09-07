@@ -5,6 +5,10 @@
 " [Plugins]
 
 call plug#begin('~/.vim/plugged')
+  " Plug 'arzg/vim-colors-xcode'
+  " Plug 'beikome/cosme.vim'
+  " Plug 'tomasiser/vim-code-dark'
+
   Plug 'jeffkreeftmeijer/vim-dim'
   Plug 'sheerun/vim-polyglot'
   Plug 'junegunn/goyo.vim'
@@ -13,7 +17,8 @@ call plug#begin('~/.vim/plugged')
   " Plug 'airblade/vim-gitgutter'
   " Plug 'codota/tabnine-vim'
 
-  Plug 'brennier/quicktex'
+  Plug 'AstralCam/quicktex'
+  Plug 'vimwiki/vimwiki'
   Plug 'lervag/vimtex'
   Plug 'KeitaNakamura/tex-conceal.vim'
 call plug#end()
@@ -36,6 +41,7 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
+set encoding=utf-8
 set nobackup
 set nowritebackup
 set noswapfile
@@ -43,7 +49,7 @@ set noswapfile
 set updatetime=300
 set shortmess+=c
 
-colorscheme dim
+colorscheme codedark
 
 nnoremap <silent> <Tab>      :bn<CR>
 nnoremap <silent> <S-Tab>    :bp<CR>
@@ -60,10 +66,20 @@ let g:vimtex_quickfix_mode=0
 
 set conceallevel=1
 let g:tex_conceal='abdmg'
-hi Conceal ctermbg=none
+" hi Conceal ctermbg=none
+
+let g:vimwiki_list = [{'path': '~/Google Drive/Notas/',
+                     \ 'syntax': 'markdown', 'ext': '.md', }]
 
 " setlocal spell
 set spelllang=es
 hi clear SpellBad
 hi SpellBad cterm=underline
+hi Conceal ctermbg=NONE guibg=NONE
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+inoremap ;; ñ
+inoremap 'a á
+inoremap 'e é
+inoremap 'i í
+inoremap 'o ó
+inoremap 'u ú
