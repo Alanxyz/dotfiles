@@ -17,8 +17,8 @@ call plug#begin('~/.vim/plugged')
   " Plug 'airblade/vim-gitgutter'
   " Plug 'codota/tabnine-vim'
 
-  Plug 'AstralCam/quicktex'
   Plug 'vimwiki/vimwiki'
+  Plug 'AstralCam/quicktex'
   Plug 'lervag/vimtex'
   Plug 'KeitaNakamura/tex-conceal.vim'
 call plug#end()
@@ -49,7 +49,7 @@ set noswapfile
 set updatetime=300
 set shortmess+=c
 
-colorscheme codedark
+colorscheme dim
 
 nnoremap <silent> <Tab>      :bn<CR>
 nnoremap <silent> <S-Tab>    :bp<CR>
@@ -64,12 +64,13 @@ let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 
-set conceallevel=1
+set conceallevel=2
 let g:tex_conceal='abdmg'
 " hi Conceal ctermbg=none
 
-let g:vimwiki_list = [{'path': '~/Google Drive/Notas/',
-                     \ 'syntax': 'markdown', 'ext': '.md', }]
+let g:vimwiki_list = [{'path': '~/Notas/',
+                     \ 'syntax': 'markdown', 'ext': '.md',
+                     \ 'custom_wiki2html': 'vimwiki_markdown'}]
 
 " setlocal spell
 set spelllang=es
@@ -83,3 +84,4 @@ inoremap 'e é
 inoremap 'i í
 inoremap 'o ó
 inoremap 'u ú
+nnoremap <Leader>m :!pandoc % -o /tmp/doc.pdf &<CR>
