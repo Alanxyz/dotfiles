@@ -1,2 +1,10 @@
 set selection-clipboard clipboard
 set guioptions none
+
+set default-bg "#2E3440"
+set default-fg "#D8DEE9"
+set statusbar-bg "#2E3440"
+set statusbar-fg "#2E3440"
+set recolor true
+set recolor-lightcolor "#2E3440"
+set recolor-darkcolor "#D8DEE9"
