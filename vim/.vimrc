@@ -5,22 +5,29 @@
 " [Plugins]
 
 call plug#begin('~/.vim/plugged')
-  " Plug 'arzg/vim-colors-xcode'
-  " Plug 'beikome/cosme.vim'
-  " Plug 'tomasiser/vim-code-dark'
 
-  Plug 'jeffkreeftmeijer/vim-dim'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'junegunn/goyo.vim'
+" Genarales
+Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/goyo.vim'
 
-  " Plug 'tpope/vim-fugitive'
-  " Plug 'airblade/vim-gitgutter'
-  " Plug 'codota/tabnine-vim'
+" Escritura
+Plug 'lervag/wiki.vim'
+Plug 'AstralCam/quicktex'
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim'
 
-  Plug 'vimwiki/vimwiki'
-  Plug 'AstralCam/quicktex'
-  Plug 'lervag/vimtex'
-  Plug 'KeitaNakamura/tex-conceal.vim'
+" Codigo
+" Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'codota/tabnine-vim'
+
+" Temas
+" Plug 'arzg/vim-colors-xcode'
+" Plug 'tomasiser/vim-code-dark'
+" Plug 'beikome/cosme.vim'
+Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+
 call plug#end()
 
 " [Opciones generales]
@@ -49,7 +56,7 @@ set noswapfile
 set updatetime=300
 set shortmess+=c
 
-colorscheme dim
+colorscheme nord
 
 nnoremap <silent> <Tab>      :bn<CR>
 nnoremap <silent> <S-Tab>    :bp<CR>
@@ -66,11 +73,11 @@ let g:vimtex_quickfix_mode=0
 
 set conceallevel=2
 let g:tex_conceal='abdmg'
-" hi Conceal ctermbg=none
+let g:vim_markdown_math = 1
 
-let g:vimwiki_list = [{'path': '~/Notas/',
-                     \ 'syntax': 'markdown', 'ext': '.md',
-                     \ 'custom_wiki2html': 'vimwiki_markdown'}]
+let g:wiki_root = '~/Notas'
+let g:wiki_filetypes = ['md']
+let g:wiki_link_extension = '.md'
 
 " setlocal spell
 set spelllang=es
@@ -84,4 +91,3 @@ inoremap 'e é
 inoremap 'i í
 inoremap 'o ó
 inoremap 'u ú
-nnoremap <Leader>m :!pandoc % -o /tmp/doc.pdf &<CR>
