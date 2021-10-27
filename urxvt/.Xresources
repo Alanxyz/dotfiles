@@ -53,6 +53,7 @@ URxvt.blurRadius: 12
 
 URxvt*font: 		xft:Iosevka Term:size=14
 URxvt*boldFont:		xft:Iosevka Term:bold:size=14
+URxvt*italicFont:		xft:Iosevka Term:italic:size=14
 URxvt*scrollBar: 	false
 URxvt*cursorUnderline:	false
 URxvt*cursorBlink:	true

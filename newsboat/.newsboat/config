@@ -2,9 +2,6 @@
 # Hide feeds where all the items are read.
 show-read-feeds no
 
-# Make the text width readable
-text-width 50
-
 # Use multiple threads to download all the news faster.
 reload-threads 11
 
@@ -43,3 +40,23 @@ bind-key I rev-sort
 
 auto-reload yes
 macro v set browser "mpv %u" ; open-in-browser ; set browser "x-www-browser %u"
+
+highlight all "---.*---" yellow
+highlight feedlist ".*(0/0))" black
+highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
+highlight article "(^Link:.*|^Date:.*)" default default
+highlight article "https?://[^ ]+" green default
+highlight article "^(Title):.*$" blue default
+highlight article "\\[[0-9][0-9]*\\]" magenta default bold
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
+highlight article ":.*\\(link\\)$" cyan default
+highlight article ":.*\\(image\\)$" blue default
+highlight article ":.*\\(embedded flash\\)$" magenta default
+
+color listnormal white default
+color listfocus blue default standout bold
+color listnormal_unread white default bold
+color listfocus_unread blue default standout bold
+color info white default 
+color article white default 

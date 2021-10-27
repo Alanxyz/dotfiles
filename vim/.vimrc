@@ -1,45 +1,40 @@
 " =====================
-"  Vim - configuracion
+"  Vim - configuración
 " =====================
 
 " [Plugins]
 
 call plug#begin('~/.vim/plugged')
 
-" Genarales
-Plug 'jeffkreeftmeijer/vim-dim'
-Plug 'sheerun/vim-polyglot'
+" Generales
+Plug 'noahfrederick/vim-noctu'
 Plug 'junegunn/goyo.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Escritura
 Plug 'lervag/wiki.vim'
 Plug 'AstralCam/quicktex'
 Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim'
+Plug 'dbridges/vim-markdown-runner'
+Plug 'samgriesemer/vim-roam-md'
 
-" Codigo
-" Plug 'tpope/vim-fugitive'
-" Plug 'airblade/vim-gitgutter'
-" Plug 'codota/tabnine-vim'
-
-" Temas
-" Plug 'arzg/vim-colors-xcode'
-" Plug 'tomasiser/vim-code-dark'
-" Plug 'beikome/cosme.vim'
-Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+" Opcionales
+Plug 'arcticicestudio/nord-vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 call plug#end()
 
 " [Opciones generales]
 
+set nocompatible
 set foldmethod=indent
 set foldnestmax=2
 set nofoldenable
 set undolevels=1000
 set path=**
 set hidden
-set number
 set wildmenu
+set ignorecase
 
 set autoindent
 set expandtab
@@ -56,14 +51,15 @@ set noswapfile
 set updatetime=300
 set shortmess+=c
 
+nnoremap <Leader><Leader>   :CtrlPMixed<CR>
+nnoremap <silent> <C-j>     :bn<CR>
+nnoremap <silent> <C-k>     :bp<CR>
+
+nnoremap <Leader>r :MarkdownRunner<CR>
+nnoremap <Leader>R :MarkdownRunnerInsert<CR>
+
+set termguicolors
 colorscheme nord
-
-nnoremap <silent> <Tab>      :bn<CR>
-nnoremap <silent> <S-Tab>    :bp<CR>
-
-" [Opciones para codigo]
-
-set wildignore+=**/node_modules/** 
 
 " [Opciones para documentos]
 
@@ -78,16 +74,19 @@ let g:vim_markdown_math = 1
 let g:wiki_root = '~/Notas'
 let g:wiki_filetypes = ['md']
 let g:wiki_link_extension = '.md'
+let g:wiki_link_toggle_on_follow = 0
 
-" setlocal spell
 set spelllang=es
-hi clear SpellBad
-hi SpellBad cterm=underline
-hi Conceal ctermbg=NONE guibg=NONE
+" set spell
+" hi clear SpellBad
+" hi SpellBad cterm=underline
+" hi Conceal ctermbg=NONE
+
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap ;; ñ
-inoremap 'a á
-inoremap 'e é
-inoremap 'i í
-inoremap 'o ó
-inoremap 'u ú
+inoremap [[ [[
+inoremap [a á
+inoremap [e é
+inoremap [i í
+inoremap [o ó
+inoremap [u ú
