@@ -37,9 +37,15 @@ bind-key B open-in-browser
 bind-key i sort
 bind-key I rev-sort
 
-
 auto-reload yes
 macro v set browser "mpv %u" ; open-in-browser ; set browser "x-www-browser %u"
+
+color listnormal white default
+color listfocus black cyan standout bold
+color listnormal_unread blue default
+color listfocus_unread cyan default bold
+color info white black bold
+color article white default bold
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
@@ -54,9 +60,3 @@ highlight article ":.*\\(link\\)$" cyan default
 highlight article ":.*\\(image\\)$" blue default
 highlight article ":.*\\(embedded flash\\)$" magenta default
 
-color listnormal white default
-color listfocus blue default standout bold
-color listnormal_unread white default bold
-color listfocus_unread blue default standout bold
-color info white default 
-color article white default 
