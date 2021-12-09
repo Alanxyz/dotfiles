@@ -55,6 +55,6 @@ timedate=$(date +'%I:%M')
  
       SLEEP_SEC=60
       while :; do     
-				echo   "WiFi: $(wifi) | Temperatura: $(temp) | Volumen: $(vol) | Bateria: $(bat) | --> [$(clock)]"
+				echo   "$(wifi) | $(temp) | $(vol) | $(bat) "
         sleep $SLEEP_SEC
         done
