@@ -3,7 +3,7 @@
 current=$(setxkbmap -query | grep layout | awk '{print $2}')
 
 if [ "$current" = "us" ]; then
-  setxkbmap es
+  setxkbmap latam
 else 
   setxkbmap us
 fi
