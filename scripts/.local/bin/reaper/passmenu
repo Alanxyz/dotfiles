@@ -1,0 +1,6 @@
+#!/bin/sh
+account=$(ls ~/.password-store/ \
+  | sed -e 's,.gpg,,g' \
+  | fzf)
+
+pass $account | xclip -sel clip
