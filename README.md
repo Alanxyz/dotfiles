@@ -26,6 +26,8 @@ Ademas de los paquetes explícitos, serán necesarios paquetes extra que se usan
 
 Se ha tratado de aplicar de manera coherente una apariencia uniforme. Para esto se utilizo, siempre que fue posible, los colores de [Cosme](https://github.com/beikome/cosme.vim) y la fuente tipográfica [Iosevka](https://typeof.net/Iosevka/).
 
+**Nota**. La temperatura de los colores varía gradualmente para proteger los ojos durante la noche.
+
 ## Configuraciones 📋
 
 ### Scripts
@@ -85,3 +87,7 @@ Estos son los atajos extra que se añaden.
 | INSERT | `<C-l>`            | Corrige orto gráficamente la ultima palabra mal escrita         |
 
 Al usar el atajo del corrector ortográfico por primer vez, automáticamente se descargaran 3 diccionarios: Ingles, Español y Latín.
+
+### Zathura
+
+Agregue un esquema de color fácil de leer. Este se encuentra deshabilitados por defecto, así que puede pasar desapercibido. Para activarlo, presione `Ctrl + r`.l
