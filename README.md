@@ -20,7 +20,7 @@ En caso de necesitar una instalación completa se usa
 stow *
 ```
 
-Ademas de los paquetes explicitos, serán necesarios paquetes extra que se usan dentro de las configuraciones. Algunos son: `fzf`, `xwallpaper`, `redshift`, `scrot`, `dmenu` y `pass`.
+Ademas de los paquetes explícitos, serán necesarios paquetes extra que se usan dentro de las configuraciones. Algunos son: `fzf`, `xwallpaper`, `redshift`, `scrot`, `dmenu` y `pass`.
 
 ## Estética 🎨
 
@@ -30,7 +30,7 @@ Se ha tratado de aplicar de manera coherente una apariencia uniforme. Para esto 
 
 ### Scripts
 
-Hay 3 scripts utiles dentro ed la configuración. Para utilizarlos es necesario agregarlos al path 
+Hay 3 scripts útiles dentro de la configuración. Para utilizarlos es necesario agregarlos al path 
 
 ```bash
 PATH=$PATH:~/.local/bin/reaper/
@@ -40,8 +40,8 @@ Estos son los scripts y su función.
 
 | Nombre     | Descripción                                                                          |
 |------------|--------------------------------------------------------------------------------------|
-| `passmenu` | Muestra un menu de selección de contraseña. La seleccionada se copia al portapapeles |
-| `emoji`    | Muestra un menu de selección de emojis. El seleccionado se copia al portapapeles     |
+| `passmenu` | Muestra un menú de selección de contraseña. La seleccionada se copia al portapapeles |
+| `emoji`    | Muestra un menú de selección de emojis. El seleccionado se copia al portapapeles     |
 | `SS`       | Toma una captura de pantalla en modo de recorte y lo copia al portapapeles           |
 
 
@@ -55,7 +55,7 @@ Mantengo la mayoría de los atajos especificados en el manual (ver `man spectrwm
 
 | Atajo                  | Descripción                                                       |
 |------------------------|-------------------------------------------------------------------|
-| `MOD + Return`         | Abre una terminal                                                 |
+| `MOD + RETURN`         | Abre una terminal                                                 |
 | `MOD + SHIFT + RETURN` | Abre una terminal en modo flotante para cosas rápidas             |
 | `MOD + n`              | Enfoca el siguiente monitor                                       |
 | `MOD + v`              | Cambia la distribución de teclado, de `en` a `latam`, y viceversa |
