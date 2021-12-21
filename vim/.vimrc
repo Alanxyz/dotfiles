@@ -15,15 +15,14 @@ Plug 'junegunn/fzf'
 " Escritura
 Plug 'lervag/wiki.vim'
 Plug 'AstralCam/quicktex'
-Plug 'samgriesemer/vim-roam-md'
 
 " Opcionales
 Plug 'beikome/cosme.vim'
+Plug 'samgriesemer/vim-roam-md'
 Plug 'dkarter/bullets.vim'
+Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
-Plug 'dbridges/vim-markdown-runner'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 call plug#end()
 
@@ -82,6 +81,7 @@ nnoremap <Leader>c :set conceallevel=2<CR>
 nnoremap <Leader>C :set conceallevel=0<CR>
 nnoremap <Leader>r :MarkdownRunner<CR>
 nnoremap <Leader>R :MarkdownRunnerInsert<CR>
+nnoremap <Leader>t :TableFormat<CR>
 
 " [Diccionario]
 
