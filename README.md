@@ -70,7 +70,7 @@ Se incluyen dos esquemas de color: `cosme` como color estético por defecto, y `
 
 Por defecto se configura usar 2 espacios al usar el tabulador, pero esto cambia en los lenguajes que requieren una atentación especifica. Por ejemplo en los Makefiles se cambia automáticamente a tabs reales.
 
-Estos son los atajos extra que se añaden.
+Estos son los atajos extra que se añaden. Mantengo por defecto que `\` sea `<leader>`. 
 
 | Modo   | Atajo              | Descripción                                                     |
 |--------|--------------------|-----------------------------------------------------------------|
@@ -90,4 +90,4 @@ Al usar el atajo del corrector ortográfico por primer vez, automáticamente se 
 
 ### Zathura
 
-Agregue un esquema de color fácil de leer. Este se encuentra deshabilitados por defecto, así que puede pasar desapercibido. Para activarlo, presione `Ctrl + r`.l
+Agregue un esquema de color fácil de leer. Este se encuentra deshabilitados por defecto, así que puede pasar desapercibido. Para activarlo, presione `Ctrl + r`.
