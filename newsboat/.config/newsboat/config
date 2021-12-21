@@ -41,11 +41,11 @@ auto-reload yes
 macro v set browser "mpv %u" ; open-in-browser ; set browser "x-www-browser %u"
 
 color listnormal white default
-color listfocus black cyan standout bold
+color listfocus cyan default 
 color listnormal_unread blue default
 color listfocus_unread cyan default bold
 color info white black bold
-color article white default bold
+color article default default bold
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
