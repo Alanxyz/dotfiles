@@ -1,6 +1,0 @@
-#!/bin/sh
-
-cat ~/.local/bin/reaper/emojilist.txt | fzf | awk '{ printf $1 }' | xclip -sel clip
-
-
-

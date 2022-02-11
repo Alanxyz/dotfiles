@@ -1,0 +1,15 @@
+#!/bin/sh
+
+DIR=$HOME/.local/share/sc
+mkdir -p $DIR
+
+if [ $# = 0 ]; then
+    echo $DIR/$(ls $DIR | fzf) 
+elif [ $1 = "a" ]; then
+  ln -s $PWD $DIR/$(basename $PWD)
+elif [ $1 = "d" ]; then
+  rm "$DIR/$(basename $PWD)"
+else
+  echo XD
+fi
+

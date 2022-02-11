@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cat ~/.local/bin/emojilist.txt | fzf | awk '{ printf $1 }' | xclip -sel clip 
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+BOOK=`find ~/Documents/Books/ | fzf`
+zathura "$BOOK" &

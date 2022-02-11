@@ -1,0 +1,4 @@
+#!/bin/sh
+
+FILE=`find ~/.dotfiles/ | fzf`
+vim "$FILE"
