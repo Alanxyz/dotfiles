@@ -1,6 +1,6 @@
 # http://evantravers.com/articles/2020/04/15/reworking-my-rss-reading/
 # Hide feeds where all the items are read.
-show-read-feeds no
+# show-read-feeds no
 
 # Use multiple threads to download all the news faster.
 reload-threads 11
@@ -40,14 +40,16 @@ bind-key I rev-sort
 auto-reload yes
 macro v set browser "mpv %u" ; open-in-browser ; set browser "x-www-browser %u"
 
+text-width 80
+
 color listnormal white default
 color listfocus cyan default 
 color listnormal_unread blue default
 color listfocus_unread cyan default bold
 color info white black bold
-color article default default bold
+color article default default 
 
-highlight all "---.*---" yellow
+highlight all "=.*="yellow
 highlight feedlist ".*(0/0))" black
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
 highlight article "(^Link:.*|^Date:.*)" default default
