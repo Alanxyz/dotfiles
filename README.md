@@ -51,7 +51,7 @@ Estos son los scripts y su función.
 
 El fondo de pantalla se configura automáticamente colocándolo en `~/.bg.png`. 
 
-Hay algunos scripts que configuran partes del entorno. Estos se encuentran en `~/.config/spectrwm/`. Al iniciar el entorno se ejecuta automáticamente el script `autorun.sh`. En la parte superior derecha de la barra se muestra el contenido de `baraction.sh`. `togglekeyboard.sh` se llama desde un atajo de teclado (tabla siguiente).
+Hay algunos scripts que configuran partes del entorno. Estos se encuentran en `~/.config/spectrwm/`. Al iniciar el entorno se ejecuta automáticamente el cripta `autorun.sh`. En la parte superior derecha de la barra se muestra el contenido de `baraction.sh`. `togglekeyboard.sh` se llama desde un atajo de teclado (tabla siguiente).
 
 Mantengo la mayoría de los atajos especificados en el manual (ver `man spectrwm`), solo hice algunos cambios menores. Esta tabla muestra la lista de atajos de teclado personalizados. En todos ellos `MOD` se refiere a la tecla `Alt`.
 
@@ -59,7 +59,8 @@ Mantengo la mayoría de los atajos especificados en el manual (ver `man spectrwm
 |------------------------|-------------------------------------------------------------------|
 | `MOD + RETURN`         | Abre una terminal                                                 |
 | `MOD + SHIFT + RETURN` | Abre una terminal en modo flotante para cosas rápidas             |
-| `MOD + n`              | Enfoca el siguiente monitor                                       |
+| `MOD + n`              | Abre una archivo de texto vació a modo de nota rápida             |
+| `MOD + o`              | Enfoca el siguiente monitor                                       |
 | `MOD + v`              | Cambia la distribución de teclado, de `en` a `latam`, y viceversa |
 
 ### Vim 
@@ -81,8 +82,6 @@ Estos son los atajos extra que se añaden. Mantengo por defecto que `\` sea `<le
 | NORMAL | `<Leader>s`        | Activa y desactiva la ortografía del texto                      |
 | NORMAL | `<Leader>c`        | Pone la ocultación de texto a nivel 2                           |
 | NORMAL | `<Leader>C`        | Pone la ocultación de texto a nivel 0 (desactivada)             |
-| NORMAL | `<Leader>r`        | Ejecuta el bloque de código (código en Markdown)                |
-| NORMAL | `<Leader>R`        | Ejecuta el bloque de código e inserta la salida en el documento |
 | NORMAL | `<Leader>t`        | Formatea tablas de Markdown                                     |
 | INSERT | `<C-l>`            | Corrige orto gráficamente la ultima palabra mal escrita         |
 
