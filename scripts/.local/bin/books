@@ -1,4 +1,5 @@
 #!/bin/sh
 
-BOOK=`find ~/Documents/Books/ | fzf`
-zathura "$BOOK" &
+DIR=~/Documents/Books
+BOOK=`find $DIR/*.pdf $DIR/*.djvu | sed "s,$DIR/,,g" | fzf --preview="echo juan"`
+zathura "$DIR/$BOOK" &

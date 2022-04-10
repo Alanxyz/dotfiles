@@ -30,5 +30,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias histmenu='$(cat ~/.bash_history | fzf)'
+alias files='xdg-open "`fzf`"'
+alias share="curl -F 'f:1=<-' ix.io"
 
 PATH=$PATH:~/.local/bin/
