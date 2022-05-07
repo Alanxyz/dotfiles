@@ -10,6 +10,6 @@ set default-bg "#282828"
 set default-fg "#282828"
 set statusbar-bg "#ebdbb2"
 set statusbar-fg "#282828"
-set recolor false
+set recolor true
 set recolor-darkcolor "#282828"
 set recolor-lightcolor "#faf1c7"

@@ -1,0 +1,76 @@
+#!/bin/sh
+
+if [ $1 = "gruvbox-light" ]; then
+    BLACK="#fbf1c7"
+    LBLACK="#282828"
+    RED="#cc241d"
+    LRED="#9d0006"
+    GREEN="#98971a"
+    LGREEN="#79740e"
+    YELLOW="#d79921"
+    LYELLOW="#b57614"
+    BLUE="#458588"
+    LBLUE="#076678"
+    MAGENTA="#b16286"
+    LMAGENTA="#8f3f71"
+    CYAN="#689d6a"
+    LCYAN="#427b58"
+    WHITE="#7c6f64"
+    LWHITE="#282828"
+
+    TYPE="LIGHT"
+    BACKGROUND="#fbf1c7"
+    FOREGROUND="#282828"
+    CURSOR="#928374"
+    FOCUS="$CYAN"
+else
+    BLACK="#665c54"
+    LBLACK="#928374"
+    RED="#ea6962"
+    LRED="#ea6962"
+    GREEN="#a9b665"
+    LGREEN="#a9b665"
+    YELLOW="#e78a4e"
+    LYELLOW="#d8a657"
+    BLUE="#7daea3"
+    LBLUE="#7daea3"
+    MAGENTA="#d3869b"
+    LMAGENTA="#d3869b"
+    CYAN="#89b482"
+    LCYAN="#89b482"
+    WHITE="#d4be98"
+    LWHITE="#d4be98"
+
+    TYPE="DARK"
+    BACKGROUND="#282828"
+    FOREGROUND="#d4be98"
+    CURSOR="#a89984"
+    FOCUS="$CYAN"
+fi 
+
+# VIM
+#
+#if [ $TYPE = "DARK" ]; then
+#    sed -i "s/background=.*/background=dark"
+#else
+#    sed -i "s/background=.*/background=light"
+#fi
+#
+## XORG
+#
+#sed -i "s/^\*backgrund: .*/\*background: $BACKGROUND"
+#sed -i "s/^\*foreground: .*/\*foreground: $BACKGROUND"
+#sed -i "s/^\*color0: .*/\*color0: $BLACK"
+#sed -i "s/^\*color8: .*/\*color8: $LBLACK"
+#sed -i "s/^\*color1: .*/\*color1: $RED"
+#sed -i "s/^\*color9: .*/\*color9: $LRED"
+
+# ZATHURA
+
+FILE="~/.config/zathura/zathurarc"
+sed -i "s/^set default-bg .*/set default-bg \"$BACKGROUND\"/"                      $FILE
+sed -i "s/^set default-fg .*/set default-fg \"$FOREGROUND\"/"                      $FILE
+sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"/"                  $FILE
+sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"/"                  $FILE
+sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$BACKGROUND\"/"      $FILE
+sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FOREGROUND\"/"        $FILE

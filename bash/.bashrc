@@ -12,7 +12,7 @@ HISTFILESIZE=2000
 
 shopt -s checkwinsize
 
-PS1="\W\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\] λ " 
+PS1="\W\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\] \[\033[35m\]λ\[\033[00m\] " 
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -32,5 +32,9 @@ alias l='ls -CF'
 alias histmenu='$(cat ~/.bash_history | fzf)'
 alias files='xdg-open "`fzf`"'
 alias share="curl -F 'f:1=<-' ix.io"
+alias gs="git status"
+alias gc="git commit"
+alias gp="git push"
+alias gP="git Pull"
 
 PATH=$PATH:~/.local/bin/
