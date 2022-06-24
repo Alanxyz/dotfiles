@@ -30,11 +30,13 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias histmenu='$(cat ~/.bash_history | fzf)'
-alias files='xdg-open "`fzf`"'
+alias files='xdg-open "`fzf --color=bw`"'
 alias share="curl -F 'f:1=<-' ix.io"
 alias gs="git status"
 alias gc="git commit"
 alias gp="git push"
-alias gP="git Pull"
+alias gP="git pull"
 
 PATH=$PATH:~/.local/bin/
+PATH=$PATH:~/.dev/node/bin/
+PATH=$PATH:~/.yarn/bin/

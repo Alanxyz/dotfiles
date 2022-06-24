@@ -10,18 +10,19 @@ call plug#begin('~/.vim/plugged')
 " Generales
 Plug 'noahfrederick/vim-noctu'
 Plug 'sheerun/vim-polyglot'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
+Plug 'junegunn/fzf'
 
 " Escritura
 Plug 'junegunn/goyo.vim'
-Plug 'lervag/wiki.vim'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'lervag/wiki.vim'
 Plug 'samgriesemer/vim-roam-md'
+Plug 'alok/notational-fzf-vim'
 
 " Opcionales
-Plug 'morhetz/gruvbox'
-Plug 'ap/vim-css-color'
+Plug 'tomasiser/vim-code-dark'
+Plug 'godlygeek/tabular'
 
 call plug#end()
 
@@ -36,17 +37,18 @@ set wildmenu
 set ignorecase
 set updatetime=300 shortmess+=c
 set wrap linebreak
-set expandtab softtabstop=4 shiftwidth=4 smarttab
+set expandtab softtabstop=2 shiftwidth=2 smarttab
 set autoindent
 set encoding=utf-8
 set nobackup nowritebackup noswapfile
 
 nnoremap Q          @q
 nnoremap <Leader>r  <CMD>source ~/.vimrc<CR>
+nnoremap <Leader>v  <CMD>edit ~/.vimrc<CR>
 
 " [Navegación]
 
-nnoremap <Leader><Leader> <CMD>CtrlP<CR>
+nnoremap <Leader><Leader> <CMD>NV<CR>
 nnoremap <silent> <C-j>   <CMD>bn<CR>
 nnoremap <silent> <C-k>   <CMD>bp<CR>
 nnoremap <Leader>e        <CMD>Lexplore<CR>
@@ -60,10 +62,15 @@ let g:netrw_list_hide     = '\(^\|\s\s\)\zs\.\S\+'
 
 " [Apariencia]
 
-let g:gruvbox_italic=1
-let g:gruvbox_bold=1
-set termguicolors background=dark
-colorscheme gruvbox
+set background=dark
+set termguicolors
+colorscheme codedark
+hi Normal       ctermbg=NONE  guibg=NONE
+hi CursorLineNr               guibg=NONE
+hi EndOfBuffer                guibg=NONE
+hi Folded                     guibg=NONE
+hi LineNr       ctermbg=NONE  guibg=NONE
+hi SignColumn   ctermbg=NONE  guibg=NONE
 
 set conceallevel=3
 set foldtext='...'
@@ -73,14 +80,17 @@ set fillchars=fold:\
 
 let g:vim_markdown_math                = 1
 let g:vim_markdown_frontmatter         = 1
-let g:wiki_root                        = '~/Documents/Notes'
+let g:wiki_root                        = '~/Documents'
 let g:wiki_filetypes                   = ['md']
 let g:wiki_link_toggle_on_follow       = 0
+
+let g:nv_search_paths = ['~/Documents/Notes', '~/Documents/Org/', '~/Documents/Journal/']
 
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
 nnoremap <Leader>g <CMD>Goyo<CR>
+nnoremap <Leader>t <CMD>TableFormat<CR>
 
 " [Escritura]
 
