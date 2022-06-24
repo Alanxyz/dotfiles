@@ -1,5 +1,7 @@
 # Dotfiles 💻
 
+(nada de esto está actualizado)
+
 ![captura de pantalla](https://i.ibb.co/19RZTNx/Screenshot-at-2021-12-20-19-50-20.png)
 
 Esta es mi configuración actual de diversos programas. Solo incluyo los mas significantes. Están enfocados principalmente para estudios, escritura y, en menor medida, programación. 
