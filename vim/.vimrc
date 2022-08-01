@@ -17,8 +17,9 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
+Plug 'lervag/lists.vim'
 Plug 'samgriesemer/vim-roam-md'
-Plug 'alok/notational-fzf-vim'
+Plug 'LukeSmithxyz/vimling'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
@@ -48,7 +49,7 @@ nnoremap <Leader>v  <CMD>edit ~/.vimrc<CR>
 
 " [Navegación]
 
-nnoremap <Leader><Leader> <CMD>NV<CR>
+nnoremap <Leader><Leader> <CMD>FZF<CR>
 nnoremap <silent> <C-j>   <CMD>bn<CR>
 nnoremap <silent> <C-k>   <CMD>bp<CR>
 nnoremap <Leader>e        <CMD>Lexplore<CR>
@@ -63,28 +64,22 @@ let g:netrw_list_hide     = '\(^\|\s\s\)\zs\.\S\+'
 " [Apariencia]
 
 set background=dark
-set termguicolors
 colorscheme codedark
-hi Normal       ctermbg=NONE  guibg=NONE
-hi CursorLineNr               guibg=NONE
-hi EndOfBuffer                guibg=NONE
-hi Folded                     guibg=NONE
-hi LineNr       ctermbg=NONE  guibg=NONE
-hi SignColumn   ctermbg=NONE  guibg=NONE
-
 set conceallevel=3
 set foldtext='...'
 set fillchars=fold:\ 
+hi Normal ctermbg=NONE guibg=NONE
+hi NonText ctermbg=NONE guibg=NONE
+let &fcs='eob: '
+
 
 " [Documentos]
 
-let g:vim_markdown_math                = 1
-let g:vim_markdown_frontmatter         = 1
-let g:wiki_root                        = '~/Documents'
-let g:wiki_filetypes                   = ['md']
-let g:wiki_link_toggle_on_follow       = 0
-
-let g:nv_search_paths = ['~/Documents/Notes', '~/Documents/Org/', '~/Documents/Journal/']
+let g:vim_markdown_math          = 1
+let g:vim_markdown_frontmatter   = 1
+let g:wiki_root                  = '~/Documents'
+let g:wiki_filetypes             = ['md']
+let g:wiki_link_toggle_on_follow = 0
 
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
@@ -99,14 +94,10 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 hi clear Conceal
 hi Conceal ctermbg=NONE
+
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-inoremap [a á
-inoremap [e é
-inoremap [i í
-inoremap [o ó
-inoremap [u ú
-inoremap ;; ñ
 inoremap [[ [[<C-x><C-o><C-p>
+
 let g:latex_to_unicode_file_types = ['markdown']
 let g:latex_to_unicode_auto = 1
 let g:SuperTabDefaultCompletionType = '<c-n>'

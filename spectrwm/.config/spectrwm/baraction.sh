@@ -41,8 +41,12 @@ todo() {
     ~/.local/bin/nt n
 }
 
+reminders() {
+    rem -n -b1 | sed "/ ago/d" | sort | head -1 | cut --complement -d " " -f 1,2
+}
+
 SLEEP_SEC=60
 while :; do     
-    echo  "$(todo) | $(wifi) | $(vol) | $(temp) | $(bat) "
+    echo  " $(reminders)"
     sleep $SLEEP_SEC
 done

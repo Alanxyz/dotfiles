@@ -1,35 +1,25 @@
 Xft.antialias: true
 
-! hard contrast: *background: #1d2021
-*background: #282828
-! soft contrast: *background: #32302f
-*foreground: #ebdbb2
-! Black + DarkGrey
-*color0:  #282828
-*color8:  #928374
-! DarkRed + Red
-*color1:  #cc241d
-*color9:  #fb4934
-! DarkGreen + Green
-*color2:  #98971a
-*color10: #b8bb26
-! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #fabd2f
-! DarkBlue + Blue
-*color4:  #458588
-*color12: #83a598
-! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #d3869b
-! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #8ec07c
-! LightGrey + White
-*color7:  #a89984
-*color15: #ebdbb2
+*background: [85]#191919
+*foreground: #d4d4d4
 
-!! URxvt Appearance
+*color0: #828282
+*color8: #828282
+*color1: #DF5452
+*color9: #DF5452
+*color2: #529E72
+*color10: #529E72
+*color3: #CA9849
+*color11: #CA9849
+*color4: #5E87C9
+*color12: #5E87C9
+*color5: #9D68D3
+*color13: #9D68D3
+*color6: #D15796
+*color14: #D15796
+*color7: #D4D4D4
+*color15: #D4D4D4
+
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.saveline: 2048
@@ -37,13 +27,13 @@ URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.iso14755: false
 
-URxvt.transparent: false
+URxvt.transparent: flase
 URxvt.shading: 55
 URxvt.blurRadius: 12
 
-URxvt*font: 		xft:Iosevka:antialias=true Term:size=14
-URxvt*boldFont:		xft:Iosevka Term:bold:size=14
-URxvt*italicFont:		xft:Iosevka Term:italic:size=14
+URxvt*font: 		xft:Iosevka:antialias=true Term:size=12
+URxvt*boldFont:		xft:Iosevka Term:bold:size=12
+URxvt*italicFont:		xft:Iosevka Term:italic:size=12
 URxvt*scrollBar: 	false
 URxvt*cursorUnderline:	false
 URxvt*cursorBlink:	true
