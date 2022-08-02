@@ -23,6 +23,7 @@ Plug 'LukeSmithxyz/vimling'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
+Plug 'sainnhe/everforest'
 Plug 'godlygeek/tabular'
 
 call plug#end()
@@ -64,13 +65,12 @@ let g:netrw_list_hide     = '\(^\|\s\s\)\zs\.\S\+'
 " [Apariencia]
 
 set background=dark
-colorscheme codedark
+set termguicolors
+let g:everforest_enable_italic = 1
+colorscheme everforest
 set conceallevel=3
 set foldtext='...'
 set fillchars=fold:\ 
-hi Normal ctermbg=NONE guibg=NONE
-hi NonText ctermbg=NONE guibg=NONE
-let &fcs='eob: '
 
 
 " [Documentos]

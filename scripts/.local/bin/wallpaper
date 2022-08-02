@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DIR=~/Pictures/Wallpapers
+WALLPAPER=`find $DIR/* | sed "s,$DIR/,,g" | fzf `
+echo "$WALLPAPER"
+
+[ -z "$WALLPAPER" ] && xwallpaper --stretch "$DIR/$WALLPAPER"
+

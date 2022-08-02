@@ -1,24 +1,41 @@
 Xft.antialias: true
 
-*background: [85]#191919
-*foreground: #d4d4d4
+! special
+*.foreground:   #d8caac
+*.background:   #323d43
+*.cursorColor:  #d8caac
 
-*color0: #828282
-*color8: #828282
-*color1: #DF5452
-*color9: #DF5452
-*color2: #529E72
-*color10: #529E72
-*color3: #CA9849
-*color11: #CA9849
-*color4: #5E87C9
-*color12: #5E87C9
-*color5: #9D68D3
-*color13: #9D68D3
-*color6: #D15796
-*color14: #D15796
-*color7: #D4D4D4
-*color15: #D4D4D4
+! black
+*.color0:       #868d80
+*.color8:       #868d80
+
+! red
+*.color1:       #e68183
+*.color9:       #e68183
+
+! green
+*.color2:       #a7c080
+*.color10:      #a7c080
+
+! yellow
+*.color3:       #d9bb80
+*.color11:      #d9bb80
+
+! blue
+*.color4:       #89beba
+*.color12:      #89beba
+
+! magenta
+*.color5:       #d3a0bc
+*.color13:      #d3a0bc
+
+! cyan
+*.color6:       #87c095
+*.color14:      #87c095
+
+! white
+*.color7:       #d8caac
+*.color15:      #d8caac
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
@@ -31,7 +48,7 @@ URxvt.transparent: flase
 URxvt.shading: 55
 URxvt.blurRadius: 12
 
-URxvt*font: 		xft:Iosevka:antialias=true Term:size=12
+URxvt*font: 		xft:Iosevka Term Medium Nerd Font Complete:antialias=true Term:size=12
 URxvt*boldFont:		xft:Iosevka Term:bold:size=12
 URxvt*italicFont:		xft:Iosevka Term:italic:size=12
 URxvt*scrollBar: 	false
