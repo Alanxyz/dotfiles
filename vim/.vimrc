@@ -17,8 +17,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
-Plug 'lervag/lists.vim'
 Plug 'samgriesemer/vim-roam-md'
+Plug 'dkarter/bullets.vim'
 Plug 'LukeSmithxyz/vimling'
 
 " Opcionales
@@ -80,6 +80,8 @@ let g:vim_markdown_frontmatter   = 1
 let g:wiki_root                  = '~/Documents'
 let g:wiki_filetypes             = ['md']
 let g:wiki_link_toggle_on_follow = 0
+let g:bullets_enabled_file_types = ['markdown']
+let g:bullets_outline_levels     = ['std*']
 
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
@@ -99,5 +101,4 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap [[ [[<C-x><C-o><C-p>
 
 let g:latex_to_unicode_file_types = ['markdown']
-let g:latex_to_unicode_auto = 1
 let g:SuperTabDefaultCompletionType = '<c-n>'
