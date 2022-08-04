@@ -38,7 +38,7 @@ bind-key i sort
 bind-key I rev-sort
 
 auto-reload yes
-macro v set browser "mpv %u" ; open-in-browser ; set browser "x-www-browser %u"
+macro v set browser "mpv --ytdl-format='bestvideo[height<=?1080]+bestaudio/best' %u" ; open-in-browser ; set browser "x-www-browser %u"
 
 text-width 80
 
