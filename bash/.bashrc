@@ -32,8 +32,10 @@ alias l='ls -CF'
 alias histmenu='$(cat ~/.bash_history | fzf)'
 alias files='xdg-open "`fzf --color=bw`"'
 alias share="curl -F 'f:1=<-' ix.io"
+alias ga="git add"
 alias gs="git status"
-alias gc="git commit"
+alias gc="git commit -m"
+alias gC="git checkout -b"
 alias gp="git push"
 alias gP="git pull"
 
