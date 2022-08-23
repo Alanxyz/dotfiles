@@ -23,6 +23,7 @@ if ! shopt -oq posix; then
 fi
 
 bind 'TAB:menu-complete'
+set -o vi
 
 alias ls='ls --color=auto'
 alias fzf='fzf --color=16'

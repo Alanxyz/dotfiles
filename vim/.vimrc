@@ -17,13 +17,12 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
-Plug 'samgriesemer/vim-roam-md'
+Plug 'Alanxyz/nicenotes'
 Plug 'dkarter/bullets.vim'
 Plug 'LukeSmithxyz/vimling'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
-Plug 'sainnhe/everforest'
 Plug 'godlygeek/tabular'
 
 call plug#end()
@@ -65,12 +64,12 @@ let g:netrw_list_hide     = '\(^\|\s\s\)\zs\.\S\+'
 " [Apariencia]
 
 set background=dark
-set termguicolors
-let g:everforest_enable_italic = 1
-colorscheme everforest
-set conceallevel=3
+" set termguicolors
+colorscheme noctu
+
 set foldtext='...'
 set fillchars=fold:\ 
+hi Folded guibg=NONE
 
 
 " [Documentos]
@@ -92,10 +91,6 @@ nnoremap <Leader>t <CMD>TableFormat<CR>
 " [Escritura]
 
 set spelllang=es
-hi clear SpellBad
-hi SpellBad cterm=underline
-hi clear Conceal
-hi Conceal ctermbg=NONE
 
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap [[ [[<C-x><C-o><C-p>
