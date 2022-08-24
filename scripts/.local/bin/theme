@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $1 = "gruvbox-light" ]; then
+if [ "$1" = "gruvbox-light" ]; then
     BLACK="#fbf1c7"
     LBLACK="#282828"
     RED="#cc241d"
@@ -23,7 +23,7 @@ if [ $1 = "gruvbox-light" ]; then
     FOREGROUND="#282828"
     CURSOR="#928374"
     FOCUS="$CYAN"
-else
+elif [ "$1" = "gruvbox" ]; then
     BLACK="#665c54"
     LBLACK="#928374"
     RED="#ea6962"
@@ -46,7 +46,80 @@ else
     FOREGROUND="#d4be98"
     CURSOR="#a89984"
     FOCUS="$CYAN"
-fi 
+elif [ "$1" = "macos" ]; then
+    BLACK="#000000"
+    RED="#990000"
+    GREEN="#00A600"
+    YELLOW="#999900"
+    BLUE="#0000B2"
+    MAGENTA="#B200B2"
+    CYAN="#00A6B2"
+    WHITE="#BFBFBF"
+    LBLACK="#666666"
+    LRED="#E50000"
+    LGREEN="#00D900"
+    LYELLOW="#E5E500"
+    LBLUE="#0000FF"
+    LMAGENTA="#E500E5"
+    LCYAN="#00E5E5"
+    LWHITE="#E5E5E5"
+
+    TYPE="LIGHT"
+    BACKGROUND="#FFFFFF"
+    FOREGROUND="#000000"
+    CURSOR="$BLUE"
+    FOCUS="$BLUE"
+elif [ "$1" = "hyper" ]; then
+    BLACK="#000000"
+    LBLACK="#686868"
+    RED="#FF3B30"
+    LRED="#FF3B30"
+    GREEN="#4CD964"
+    LGREEN="#4CD964"
+    YELLOW="#FFCC00"
+    LYELLOW="#FFCC00"
+    BLUE="#0095FF"
+    LBLUE="#0095FF"
+    MAGENTA="#FF2D55"
+    LMAGENTA="#FF2D55"
+    CYAN="#5AC8FA"
+    LCYAN="#5AC8FA"
+    WHITE="#FFFFFF"
+    LWHITE="#FFFFFF"
+
+    TYPE="DARK"
+    BACKGROUND="$BLACK"
+    FOREGROUND="$WHITE"
+    CURSOR="#f81ce5"
+    FOCUS="$BLUE"
+else
+    exit
+fi
+
+
+# KITTY
+
+FILE="/home/alan/.config/kitty/kitty.conf"
+sed -i "s/^foreground .*/foreground $FOREGROUND/"        $FILE
+sed -i "s/^background .*/background $BACKGROUND/"        $FILE
+sed -i "s/^cursor .*/cursor $CURSOR/"                    $FILE
+
+sed -i "s/^color0 .*/color0 $BLACK/"                     $FILE
+sed -i "s/^color8 .*/color8 $LBLACK/"                    $FILE
+sed -i "s/^color1 .*/color1 $RED/"                       $FILE
+sed -i "s/^color9 .*/color9 $LRED/"                      $FILE
+sed -i "s/^color2 .*/color2 $GREEN/"                     $FILE
+sed -i "s/^color10 .*/color10 $LGREEN/"                  $FILE
+sed -i "s/^color3 .*/color3 $YELLOW/"                    $FILE
+sed -i "s/^color11 .*/color11 $LYELLOW/"                 $FILE
+sed -i "s/^color4 .*/color4 $BLUE/"                      $FILE
+sed -i "s/^color12 .*/color12 $LBLUE/"                   $FILE
+sed -i "s/^color5 .*/color5 $MAGENTA/"                   $FILE
+sed -i "s/^color13 .*/color13 $MAGENTA/"                 $FILE
+sed -i "s/^color6 .*/color6 $CYAN/"                      $FILE
+sed -i "s/^color14 .*/color14 $LCYAN/"                   $FILE
+sed -i "s/^color7 .*/color7 $WHITE/"                     $FILE
+sed -i "s/^color15 .*/color15 $LWHITE/"                  $FILE
 
 # VIM
 #
@@ -55,7 +128,7 @@ fi
 #else
 #    sed -i "s/background=.*/background=light"
 #fi
-#
+
 ## XORG
 #
 #sed -i "s/^\*backgrund: .*/\*background: $BACKGROUND"
@@ -67,10 +140,12 @@ fi
 
 # ZATHURA
 
-FILE="~/.config/zathura/zathurarc"
+FILE="$HOME/.config/zathura/zathurarc"
 sed -i "s/^set default-bg .*/set default-bg \"$BACKGROUND\"/"                      $FILE
 sed -i "s/^set default-fg .*/set default-fg \"$FOREGROUND\"/"                      $FILE
 sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"/"                  $FILE
 sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"/"                  $FILE
 sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$BACKGROUND\"/"      $FILE
 sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FOREGROUND\"/"        $FILE
+
+echo Done!
