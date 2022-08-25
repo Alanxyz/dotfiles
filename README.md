@@ -42,11 +42,14 @@ PATH=$PATH:~/.local/bin/reaper/
 
 Estos son los scripts y su función. 
 
-| Nombre     | Descripción                                                                          |
-|------------|--------------------------------------------------------------------------------------|
-| `passmenu` | Muestra un menú de selección de contraseña. La seleccionada se copia al portapapeles |
-| `emoji`    | Muestra un menú de selección de emojis. El seleccionado se copia al portapapeles     |
-| `SS`       | Toma una captura de pantalla en modo de recorte y lo copia al portapapeles           |
+| Nombre      | Descripción                                                                          |
+|-------------|--------------------------------------------------------------------------------------|
+| `passmenu`  | Muestra un menú de selección de contraseña. La seleccionada se copia al portapapeles |
+| `emoji`     | Muestra un menú de selección de emojis. El seleccionado se copia al portapapeles     |
+| `SS`        | Toma una captura de pantalla en modo de recorte y lo copia al portapapeles           |
+| `wttr`      | Muestra el reporte del clima                                                         |
+| `wallpaper` | Selección de fondo de pantalla                                                       |
+| `theme`     | Aplica un tema de colores a las aplicaciones                                         |
 
 
 ### Spectrwm
