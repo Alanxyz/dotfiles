@@ -17,7 +17,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
-Plug 'Alanxyz/nicenotes'
+Plug 'samgriesemer/vim-roam-md'
 Plug 'dkarter/bullets.vim'
 Plug 'LukeSmithxyz/vimling'
 
@@ -70,6 +70,8 @@ colorscheme noctu
 set foldtext='...'
 set fillchars=fold:\ 
 hi Folded guibg=NONE
+
+set conceallevel=2
 
 
 " [Documentos]

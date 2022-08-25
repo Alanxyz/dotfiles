@@ -39,6 +39,7 @@ alias gc="git commit -m"
 alias gC="git checkout -b"
 alias gp="git push"
 alias gP="git pull"
+alias week="rem -c+1n"
 
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:~/.dev/node/bin/
