@@ -46,7 +46,7 @@ elif [ "$1" = "gruvbox" ]; then
     FOREGROUND="#d4be98"
     CURSOR="#a89984"
     FOCUS="$CYAN"
-elif [ "$1" = "macos" ]; then
+elif [ "$1" = "aesthetic" ]; then
     BLACK="#000000"
     RED="#990000"
     GREEN="#00A600"
@@ -104,6 +104,10 @@ sed -i "s/^foreground .*/foreground $FOREGROUND/"        $FILE
 sed -i "s/^background .*/background $BACKGROUND/"        $FILE
 sed -i "s/^cursor .*/cursor $CURSOR/"                    $FILE
 
+[ -z "$TRANSPARENCY" ] && TRANSPARENCY="1.00"
+
+sed -i "s/^background_opacity .*/background_opacity $TRANSPARENCY/" $FILE
+
 sed -i "s/^color0 .*/color0 $BLACK/"                     $FILE
 sed -i "s/^color8 .*/color8 $LBLACK/"                    $FILE
 sed -i "s/^color1 .*/color1 $RED/"                       $FILE
@@ -147,5 +151,9 @@ sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"/"               
 sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"/"                  $FILE
 sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$BACKGROUND\"/"      $FILE
 sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FOREGROUND\"/"        $FILE
+
+# Wallpaper
+
+xwallpaper --stretch "$HOME/Pictures/Wallpapers/$1.png"
 
 echo Done!

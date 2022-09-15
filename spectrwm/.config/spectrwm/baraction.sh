@@ -47,6 +47,6 @@ reminders() {
 
 SLEEP_SEC=60
 while :; do     
-    echo  " $(reminders)"
+    echo  "$(bat)"
     sleep $SLEEP_SEC
 done

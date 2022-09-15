@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 " Generales
 Plug 'noahfrederick/vim-noctu'
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf'
@@ -63,9 +64,9 @@ let g:netrw_list_hide     = '\(^\|\s\s\)\zs\.\S\+'
 
 " [Apariencia]
 
-set background=dark
+set background=light
 " set termguicolors
-colorscheme noctu
+colorscheme dim
 
 set foldtext='...'
 set fillchars=fold:\ 

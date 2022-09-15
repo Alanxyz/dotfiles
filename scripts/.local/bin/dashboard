@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rem 
+
+curl wttr.in
