@@ -134,25 +134,41 @@ sed -i "s/^color15 .*/color15 $LWHITE/"                  $FILE
 #fi
 
 ## XORG
-#
-#sed -i "s/^\*backgrund: .*/\*background: $BACKGROUND"
-#sed -i "s/^\*foreground: .*/\*foreground: $BACKGROUND"
-#sed -i "s/^\*color0: .*/\*color0: $BLACK"
-#sed -i "s/^\*color8: .*/\*color8: $LBLACK"
-#sed -i "s/^\*color1: .*/\*color1: $RED"
-#sed -i "s/^\*color9: .*/\*color9: $LRED"
+
+FILE="$HOME/.Xresources"
+sed -i "s/^\*\.background: .*/\*\.background: $BACKGROUND/"    $FILE
+sed -i "s/^\*\.foreground: .*/\*\.foreground: $FOREGROUND/"    $FILE
+sed -i "s/^\*\.cursorColor: .*/\*\.cursorColor: $FOREGROUND/"  $FILE
+sed -i "s/^\*\.color0: .*/\*\.color0: $BLACK/"                 $FILE
+sed -i "s/^\*\.color8: .*/\*\.color8: $LBLACK/"                $FILE
+sed -i "s/^\*\.color1: .*/\*\.color1: $RED/"                   $FILE
+sed -i "s/^\*\.color9: .*/\*\.color9: $LRED/"                  $FILE
+sed -i "s/^\*\.color2: .*/\*\.color2: $GREEN/"                 $FILE
+sed -i "s/^\*\.color10: .*/\*\.color10: $LGREEN/"              $FILE
+sed -i "s/^\*\.color3: .*/\*\.color3: $YELLOW/"                $FILE
+sed -i "s/^\*\.color11: .*/\*\.color11: $LYELLOW/"             $FILE
+sed -i "s/^\*\.color4: .*/\*\.color4: $BLUE/"                  $FILE
+sed -i "s/^\*\.color12: .*/\*\.color12: $BLUE/"                $FILE
+sed -i "s/^\*\.color5: .*/\*\.color5: $MAGENTA/"               $FILE
+sed -i "s/^\*\.color13: .*/\*\.color13: $LMAGENTA/"            $FILE
+sed -i "s/^\*\.color6: .*/\*\.color6: $CYAN/"                  $FILE
+sed -i "s/^\*\.color14: .*/\*\.color14: $LCYAN/"               $FILE
+sed -i "s/^\*\.color7: .*/\*\.color7: $WHITE/"                 $FILE
+sed -i "s/^\*\.color15: .*/\*\.color15: $LWHITE/"              $FILE
+
+xrdb $FILE
 
 # ZATHURA
 
 FILE="$HOME/.config/zathura/zathurarc"
-sed -i "s/^set default-bg .*/set default-bg \"$BACKGROUND\"/"                      $FILE
-sed -i "s/^set default-fg .*/set default-fg \"$FOREGROUND\"/"                      $FILE
-sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"/"                  $FILE
-sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"/"                  $FILE
-sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$BACKGROUND\"/"      $FILE
-sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FOREGROUND\"/"        $FILE
-
-# Wallpaper
+sed -i "s/^set default-bg .*/set default-bg \"$BACKGROUND\"/"  $FILE                    $FILE
+sed -i "s/^set default-fg .*/set default-fg \"$FOREGROUND\"/"  $FILE                    $FILE
+sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"$FILE/"                  $FILE
+sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"$FILE/"                  $FILE
+sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$$FILEBACKGROUND\"/"      $FILE
+sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FO$FILEREGROUND\"/"        $FILE
+                                                               $FILE
+# Wallpaper                                                    $FILE
 
 xwallpaper --stretch "$HOME/Pictures/Wallpapers/$1.png"
 

@@ -48,9 +48,9 @@ URxvt.transparent: flase
 URxvt.shading: 55
 URxvt.blurRadius: 12
 
-URxvt*font: 		xft:Iosevka Term Medium Nerd Font Complete:antialias=true Term:size=12
-URxvt*boldFont:		xft:Iosevka Term:bold:size=12
-URxvt*italicFont:		xft:Iosevka Term:italic:size=12
+URxvt*font: 		xft:Julia Mono:antialias=true Term:size=12
+URxvt*boldFont:		xft:Julia Mono:bold:size=12
+URxvt*italicFont:		xft:Julia Mono:italic:size=12
 URxvt*scrollBar: 	false
 URxvt*cursorUnderline:	false
 URxvt*cursorBlink:	true
