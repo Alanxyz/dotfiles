@@ -161,14 +161,14 @@ xrdb $FILE
 # ZATHURA
 
 FILE="$HOME/.config/zathura/zathurarc"
-sed -i "s/^set default-bg .*/set default-bg \"$BACKGROUND\"/"  $FILE                    $FILE
-sed -i "s/^set default-fg .*/set default-fg \"$FOREGROUND\"/"  $FILE                    $FILE
-sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"$FILE/"                  $FILE
-sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"$FILE/"                  $FILE
-sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$$FILEBACKGROUND\"/"      $FILE
-sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FO$FILEREGROUND\"/"        $FILE
-                                                               $FILE
-# Wallpaper                                                    $FILE
+sed -i "s/^set default-bg .*/set default-bg \"$BACKGROUND\"/"                 $FILE
+sed -i "s/^set default-fg .*/set default-fg \"$FOREGROUND\"/"                 $FILE
+sed -i "s/^set statusbar-bg .*/set statusbar-bg \"$BACKGROUND\"/"             $FILE
+sed -i "s/^set statusbar-fg .*/set statusbar-fg \"$FOREGROUND\"/"             $FILE
+sed -i "s/^set recolor-lightcolor .*/set recolor-lightcolor \"$BACKGROUND\"/" $FILE
+sed -i "s/^set recolor-darkcolor .*/set recolor-darkcolor \"$FOREGROUND\"/"   $FILE
+
+# Wallpaper
 
 xwallpaper --stretch "$HOME/Pictures/Wallpapers/$1.png"
 
