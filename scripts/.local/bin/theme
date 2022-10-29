@@ -158,6 +158,31 @@ sed -i "s/^\*\.color15: .*/\*\.color15: $LWHITE/"              $FILE
 
 xrdb $FILE
 
+# SPECTRWM
+
+FILE="$HOME/.config/spectrwm/spectrwm.conf"
+
+hex2spectr() #RRGGBB -> rgb:RR/GG/BB
+{
+    R=`echo $1 | cut -c2-3`
+    G=`echo $1 | cut -c4-5`
+    B=`echo $1 | cut -c6-7`
+
+    echo rgb:$R\\/$G\\/$B
+}
+
+SPECTR_COLOR=`hex2spectr $FOREGROUND`
+sed -i "s/^bar_font_color =.*/bar_font_color = $SPECTR_COLOR/" $FILE
+sed -i "s/^bar_font_color_selected =.*/bar_font_color_selected = $SPECTR_COLOR/" $FILE
+SPECTR_COLOR=`hex2spectr $BACKGROUND`
+sed -i "s/^bar_border =.*/bar_border = $SPECTR_COLOR/" $FILE
+sed -i "s/^bar_border_unfocus =.*/bar_border_unfocus = $SPECTR_COLOR/" $FILE
+sed -i "s/^bar_color =.*/bar_color = $SPECTR_COLOR/" $FILE
+sed -i "s/^color_unfocus =.*/color_unfocus = $SPECTR_COLOR/" $FILE
+SPECTR_COLOR=`hex2spectr $BLUE`
+sed -i "s/^color_focus =.*/color_focus = $SPECTR_COLOR/" $FILE
+
+
 # ZATHURA
 
 FILE="$HOME/.config/zathura/zathurarc"
