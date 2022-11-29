@@ -40,6 +40,8 @@ alias gC="git checkout -b"
 alias gp="git push"
 alias gP="git pull"
 alias week="rem -c+1n"
+alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
+
 
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:~/.dev/node/bin/
