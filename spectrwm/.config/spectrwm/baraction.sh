@@ -20,8 +20,10 @@ temp() {
 bat() {
     batstat="$(cat /sys/class/power_supply/BAT0/status)"
     battery="$(cat /sys/class/power_supply/BAT0/capacity)"
+    baticon=""
+    [ $batstat = "Charging" ] && baticon="+"
 
-    echo "$battery"%""
+    echo "$baticon$battery"%""
 }
 
 wifi() {
