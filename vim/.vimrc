@@ -92,5 +92,8 @@ set spelllang=es
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap [[ [[<C-x><C-o><C-p>
 
+inorea DATE <C-R>=strftime('%Y-%b-%d')<CR>
+inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
+
 let g:latex_to_unicode_file_types = ['markdown']
 let g:SuperTabDefaultCompletionType = '<c-n>'
