@@ -46,6 +46,30 @@ elif [ "$1" = "gruvbox" ]; then
     FOREGROUND="#d4be98"
     CURSOR="#a89984"
     FOCUS="$CYAN"
+elif [ "$1" = "denisse" ]; then
+    BLACK="#000000"
+    RED="#cc0000"
+    GREEN="#4e9a06"
+    YELLOW="#c4a000"
+    BLUE="#3465a4"
+    MAGENTA="#75507b"
+    CYAN="#06989a"
+    WHITE="#d3d7cf"
+    LBLACK="#555753"
+    LRED="#ef2929"
+    LGREEN="#8ae234"
+    LYELLOW="#fce94f"
+    LBLUE="#729fcf"
+    LMAGENTA="#ad7fa8"
+    LCYAN="#34e2e2"
+    LWHITE="#eeeeec"
+
+    TYPE="DARK"
+    BACKGROUND="#00002c"
+    FOREGROUND="#57d3e2"
+    CURSOR="#e9422b"
+    FOCUS="#4ec2f7"
+    TRANSPARENT="0.85"
 elif [ "$1" = "aesthetic" ]; then
     BLACK="#000000"
     RED="#990000"
@@ -69,6 +93,53 @@ elif [ "$1" = "aesthetic" ]; then
     FOREGROUND="#000000"
     CURSOR="$BLUE"
     FOCUS="$BLUE"
+elif [ "$1" = "nord" ]; then
+    BLACK="#2E3440"
+    LBLACK="#4C566A"
+    RED="#BF616A"
+    LRED="$RED"
+    GREEN="#A3BE8C"
+    LGREEN="$GREEN"
+    YELLOW="#EBCB8B"
+    LYELLOW="$YELLOW"
+    BLUE="#81A1C1"
+    LBLUE="$BLUE"
+    MAGENTA="#B48EAD"
+    LMAGENTA="$MAGENTA"
+    CYAN="#88C0D0"
+    LCYAN="$CYAN"
+    WHITE="#ECEFF4"
+    LWHITE="#ECEFF4"
+
+    TYPE="DARK"
+    BACKGROUND="$BLACK"
+    FOREGROUND="$WHITE"
+    CURSOR="#8FBCBB"
+    FOCUS="$BLUE"
+elif [ "$1" = "cosme" ]; then
+    BLACK="#303030"
+    LBLACK="#3f3939"
+    RED="#ffafd7"
+    LRED="#ffc8e3"
+    GREEN="#afffd7"
+    LGREEN="#c8ffe3"
+    YELLOW="#ffaf87"
+    LYELLOW="#ffc0a0"
+    BLUE="#afd7ff"
+    LBLUE="#c8e3ff"
+    MAGENTA="#ffd7ff"
+    LMAGENTA="#fff0ff"
+    CYAN="#d7d7ff"
+    LCYAN="#f0f0ff"
+    WHITE="#eeeeee"
+    LWHITE="#808080"
+
+    TYPE="DARK"
+    BACKGROUND="$BLACK"
+    FOREGROUND="$WHITE"
+    CURSOR="$CYAN"
+    FOCUS="$RED"
+
 elif [ "$1" = "hyper" ]; then
     BLACK="#000000"
     LBLACK="#686868"
@@ -91,11 +162,12 @@ elif [ "$1" = "hyper" ]; then
     BACKGROUND="$BLACK"
     FOREGROUND="$WHITE"
     CURSOR="#f81ce5"
-    FOCUS="$BLUE"
+    FOCUS="$WHITE"
 else
     exit
 fi
 
+[ -z "$FOCUS" ] && FOCUS="$BLUE"
 
 # KITTY
 
@@ -138,7 +210,7 @@ sed -i "s/^color15 .*/color15 $LWHITE/"                  $FILE
 FILE="$HOME/.Xresources"
 sed -i "s/^\*\.background: .*/\*\.background: $BACKGROUND/"    $FILE
 sed -i "s/^\*\.foreground: .*/\*\.foreground: $FOREGROUND/"    $FILE
-sed -i "s/^\*\.cursorColor: .*/\*\.cursorColor: $FOREGROUND/"  $FILE
+sed -i "s/^\*\.cursorColor: .*/\*\.cursorColor: $CURSOR/"      $FILE
 sed -i "s/^\*\.color0: .*/\*\.color0: $BLACK/"                 $FILE
 sed -i "s/^\*\.color8: .*/\*\.color8: $LBLACK/"                $FILE
 sed -i "s/^\*\.color1: .*/\*\.color1: $RED/"                   $FILE
@@ -179,7 +251,7 @@ sed -i "s/^bar_border =.*/bar_border = $SPECTR_COLOR/" $FILE
 sed -i "s/^bar_border_unfocus =.*/bar_border_unfocus = $SPECTR_COLOR/" $FILE
 sed -i "s/^bar_color =.*/bar_color = $SPECTR_COLOR/" $FILE
 sed -i "s/^color_unfocus =.*/color_unfocus = $SPECTR_COLOR/" $FILE
-SPECTR_COLOR=`hex2spectr $BLUE`
+SPECTR_COLOR=`hex2spectr $FOCUS`
 sed -i "s/^color_focus =.*/color_focus = $SPECTR_COLOR/" $FILE
 
 

@@ -66,16 +66,17 @@ set foldtext='...'
 set fillchars=fold:\ 
 hi Folded guibg=NONE
 
-set conceallevel=2
+set conceallevel=0
 
 
 " [Documentos]
 
 let g:vim_markdown_math          = 1
 let g:vim_markdown_frontmatter   = 1
-let g:wiki_root                  = '~/Documents'
+let g:wiki_root                  = '~/Documents/Notes'
 let g:wiki_filetypes             = ['md']
 let g:wiki_link_toggle_on_follow = 0
+let g:wiki_journal               = { 'name': '' }
 let g:bullets_enabled_file_types = ['markdown']
 let g:bullets_outline_levels     = ['std*']
 
@@ -85,6 +86,13 @@ nnoremap <Leader>C <CMD>set conceallevel=0<CR>
 nnoremap <Leader>g <CMD>Goyo<CR>
 nnoremap <Leader>t <CMD>TableFormat<CR>
 
+hi mkdDelimiter cterm=bold
+hi mkdH1 cterm=bold
+hi mkdH2 cterm=bold
+hi mkdH3 cterm=bold
+hi mkdH4 cterm=bold
+hi mkdDelimiter ctermfg=Grey
+
 " [Escritura]
 
 set spelllang=es
@@ -92,7 +100,7 @@ set spelllang=es
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap [[ [[<C-x><C-o><C-p>
 
-inorea DATE <C-R>=strftime('%Y-%b-%d')<CR>
+inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
 inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 
 let g:latex_to_unicode_file_types = ['markdown']

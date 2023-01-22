@@ -25,6 +25,8 @@ fi
 bind 'TAB:menu-complete'
 set -o vi
 
+FZF_DEFAULT_COMMAND='rg'
+
 alias ls='ls --color=auto'
 alias fzf='fzf --color=16'
 alias ll='ls -l'
