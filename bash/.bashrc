@@ -44,6 +44,7 @@ alias gP="git pull"
 alias week="rem -c+1n"
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 
+alias docker-anaconda="sudo docker run -it continuumio/anaconda3 /bin/bash"
 
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:~/.dev/node/bin/

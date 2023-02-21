@@ -21,7 +21,6 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
 Plug 'samgriesemer/vim-roam-md'
 Plug 'dkarter/bullets.vim'
-Plug 'LukeSmithxyz/vimling'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
@@ -40,7 +39,7 @@ set wildmenu
 set ignorecase
 set updatetime=300 shortmess+=c
 set wrap linebreak
-set expandtab softtabstop=2 shiftwidth=2 smarttab
+set expandtab tabstop=2 shiftwidth=2 smarttab
 set autoindent
 set encoding=utf-8
 set nobackup nowritebackup noswapfile
@@ -85,13 +84,14 @@ nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
 nnoremap <Leader>g <CMD>Goyo<CR>
 nnoremap <Leader>t <CMD>TableFormat<CR>
+nnoremap <Leader>b <CMD>WikiGraphFindBacklinks<CR>
 
 hi mkdDelimiter cterm=bold
 hi mkdH1 cterm=bold
-hi mkdH2 cterm=bold
+hi mkdH2 cterm=bold 
 hi mkdH3 cterm=bold
 hi mkdH4 cterm=bold
-hi mkdDelimiter ctermfg=Grey
+hi mkdDelimiter ctermfg=8
 
 " [Escritura]
 

@@ -5,7 +5,7 @@ setxkbmap -option caps:escape &
 
 xwallpaper --stretch ~/.bg.png &
 # hsetroot -solid "#7C8377" &
-picom -c -f --vsync --backend=glx &
+picom &
 
 redshift &
 syncthing -no-browser &

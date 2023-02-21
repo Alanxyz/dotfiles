@@ -39,8 +39,9 @@ watter() {
     curl wttr.in/?format=4
 }
 
-todo() {
-    ~/.local/bin/nt n
+energy() {
+    h=`date +%H`
+    m=`date +%M`
 }
 
 reminders() {
