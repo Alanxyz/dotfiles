@@ -92,6 +92,8 @@ hi mkdH2 cterm=bold
 hi mkdH3 cterm=bold
 hi mkdH4 cterm=bold
 hi mkdDelimiter ctermfg=8
+hi clear SpellBad
+hi SpellBad cterm=italic
 
 " [Escritura]
 

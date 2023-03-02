@@ -6,35 +6,35 @@ set statusbar-v-padding 0
 set page-padding 1
 set selection-clipboard clipboard
 
-set default-bg "#282828"
-set default-fg "#d4be98"
+set default-bg "#303030"
+set default-fg "#eeeeee"
 
-set statusbar-fg "#d4be98"
-set statusbar-bg "#282828"
+set statusbar-fg "#eeeeee"
+set statusbar-bg "#303030"
 
-set inputbar-bg                 "#2b3339"
-set inputbar-fg                 "#d3c6aa"
+set inputbar-bg                 "#303030"
+set inputbar-fg                 "#eeeeee"
 
-set notification-bg             "#2b3339"
-set notification-fg             "#d3c6aa"
+set notification-bg             "#303030"
+set notification-fg             "#eeeeee"
 
-set notification-error-bg       "#2b3339"
-set notification-error-fg       "#d3c6aa"
+set notification-error-bg       "#303030"
+set notification-error-fg       "#eeeeee"
 
-set notification-warning-bg     "#2b3339"
-set notification-warning-fg     "#d3c6aa"
+set notification-warning-bg     "#303030"
+set notification-warning-fg     "#eeeeee"
 
-set highlight-color             "#4b565c"
-set highlight-active-color      "#e67e80"
+set highlight-color             "#ffafd7"
+set highlight-active-color      "#ffafd7"
 
-set completion-bg               "#2b3339"
-set completion-fg               "#d3c6aa"
+set completion-bg               "#303030"
+set completion-fg               "#eeeeee"
 
-set completion-highlight-fg     "#4b565c"
-set completion-highlight-bg     "#2b3339"
+set completion-highlight-fg     "#ffafd7"
+set completion-highlight-bg     "#303030"
 
-set recolor-lightcolor "#282828"
-set recolor-darkcolor "#d4be98"
+set recolor-lightcolor "#303030"
+set recolor-darkcolor "#eeeeee"
 
 set recolor                     "true"
 set recolor-keephue             "false"
