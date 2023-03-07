@@ -1,0 +1,32 @@
+[calendars]
+
+[[alan]]
+path = ~/.calendars/alan/
+color = dark red
+priority = 20
+
+[[university]]
+path = ~/.calendars/university/
+color = dark blue
+priority = 10
+
+[[home]]
+path = ~/.calendars/home/
+color = yellow
+priority = 10
+
+[[birthdays]]
+path = ~/.calendars/birthdays/
+color = dark green
+priority = 30
+type = birthdays
+
+[locale]
+timeformat = %I:%M %p
+dateformat = %d-%m-%Y
+longdateformat = %d-%m-%Y
+datetimeformat = %d-%m-%Y %I:%M %p
+longdatetimeformat = %d-%m-%Y %I:%M %p
+
+[default]
+default_calendar = alan
