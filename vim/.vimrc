@@ -16,7 +16,7 @@ Plug 'junegunn/fzf'
 Plug 'preservim/nerdtree'
 
 " Escritura
-Plug 'junegunn/goyo.vim'
+" Plug 'anufrievroman/vim-angry-reviewer'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
 Plug 'samgriesemer/vim-roam-md'
@@ -25,13 +25,14 @@ Plug 'dkarter/bullets.vim'
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
 Plug 'godlygeek/tabular'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
 " [Opciones generales]
 
 set nocompatible
-set foldmethod=indent foldnestmax=2 nofoldenable
+set foldnestmax=2 nofoldenable
 set undolevels=1000
 set path=**
 set hidden
@@ -61,7 +62,7 @@ set background=dark
 " set termguicolors
 colorscheme dim
 
-set foldtext='...'
+set foldtext='‣'
 set fillchars=fold:\ 
 hi Folded guibg=NONE
 
@@ -76,22 +77,28 @@ let g:wiki_root                  = '~/Documents/Notes'
 let g:wiki_filetypes             = ['md']
 let g:wiki_link_toggle_on_follow = 0
 let g:wiki_journal               = { 'name': '' }
+let g:wiki_link_creation = {
+      \ 'md': {
+      \   'link_type': 'md',
+      \   'url_extension': '',
+      \ },
+      \}
 let g:bullets_enabled_file_types = ['markdown']
 let g:bullets_outline_levels     = ['std*']
 
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
-nnoremap <Leader>g <CMD>Goyo<CR>
 nnoremap <Leader>t <CMD>TableFormat<CR>
 nnoremap <Leader>b <CMD>WikiGraphFindBacklinks<CR>
+nnoremap <Leader>g <CMD>Goyo<CR>
 
-hi mkdDelimiter cterm=bold
+hi mkdHeading cterm=bold
 hi mkdH1 cterm=bold
 hi mkdH2 cterm=bold 
 hi mkdH3 cterm=bold
 hi mkdH4 cterm=bold
-hi mkdDelimiter ctermfg=8
+hi mkdDelimiter ctermfg=15
 hi clear SpellBad
 hi SpellBad cterm=italic
 

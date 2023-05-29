@@ -1,6 +1,6 @@
 # http://evantravers.com/articles/2020/04/15/reworking-my-rss-reading/
 # Hide feeds where all the items are read.
-# show-read-feeds no
+show-read-feeds no
 
 # Use multiple threads to download all the news faster.
 reload-threads 11
