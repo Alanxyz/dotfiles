@@ -58,7 +58,7 @@ nnoremap <Leader>e        <CMD>NERDTreeToggle<CR>
 
 " [Apariencia]
 
-set background=dark
+set background=light
 " set termguicolors
 colorscheme dim
 
@@ -73,8 +73,7 @@ set conceallevel=0
 
 let g:vim_markdown_math          = 1
 let g:vim_markdown_frontmatter   = 1
-let g:wiki_root                  = '~/Documents/Notes'
-let g:wiki_filetypes             = ['md']
+let g:wiki_root                  = '~/OMNIA/PERSONALIS/CODEX'
 let g:wiki_link_toggle_on_follow = 0
 let g:wiki_journal               = { 'name': '' }
 let g:wiki_link_creation = {
@@ -91,7 +90,8 @@ nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
 nnoremap <Leader>t <CMD>TableFormat<CR>
 nnoremap <Leader>b <CMD>WikiGraphFindBacklinks<CR>
-nnoremap <Leader>g <CMD>Goyo<CR>
+nnoremap <Leader>g <CMD>WikiGraphRelated<CR>
+nnoremap <Leader>f <CMD>Goyo<CR>
 
 hi mkdHeading cterm=bold
 hi mkdH1 cterm=bold
