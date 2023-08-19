@@ -21,6 +21,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
 Plug 'samgriesemer/vim-roam-md'
 Plug 'dkarter/bullets.vim'
+Plug 'kyuhi/vim-emoji-complete'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
@@ -73,7 +74,7 @@ set conceallevel=0
 
 let g:vim_markdown_math          = 1
 let g:vim_markdown_frontmatter   = 1
-let g:wiki_root                  = '~/OMNIA/PERSONALIS/CODEX'
+let g:wiki_root                  = '~/OMNIA/PERSONALIS/CODEX/'
 let g:wiki_link_toggle_on_follow = 0
 let g:wiki_journal               = { 'name': '' }
 let g:wiki_link_creation = {
@@ -82,6 +83,11 @@ let g:wiki_link_creation = {
       \   'url_extension': '',
       \ },
       \}
+let s:tag_parser = deepcopy(g:wiki#tags#default_parser)
+let s:tag_parser.re_match = '\v%(^|\s)#\zs[^# ]+'
+let s:tag_parser.re_findstart = '\v%(^|\s)#\zs[^# ]+'
+let s:tag_parser.make = {t, l -> empty(t) ? '' : join(map(t, '"#" . v:val'))}
+let g:wiki_tag_parsers = [s:tag_parser]
 let g:bullets_enabled_file_types = ['markdown']
 let g:bullets_outline_levels     = ['std*']
 
@@ -98,7 +104,7 @@ hi mkdH1 cterm=bold
 hi mkdH2 cterm=bold 
 hi mkdH3 cterm=bold
 hi mkdH4 cterm=bold
-hi mkdDelimiter ctermfg=15
+hi mkdDelimiter ctermfg=6
 hi clear SpellBad
 hi SpellBad cterm=italic
 
