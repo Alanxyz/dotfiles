@@ -27,6 +27,7 @@ Plug 'kyuhi/vim-emoji-complete'
 Plug 'tomasiser/vim-code-dark'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 call plug#end()
 
@@ -59,7 +60,7 @@ nnoremap <Leader>e        <CMD>NERDTreeToggle<CR>
 
 " [Apariencia]
 
-set background=light
+set background=dark
 " set termguicolors
 colorscheme dim
 
@@ -68,7 +69,7 @@ set fillchars=fold:\
 hi Folded guibg=NONE
 
 set conceallevel=0
-
+let g:limelight_conceal_ctermfg = 8
 
 " [Documentos]
 
@@ -97,7 +98,7 @@ nnoremap <Leader>C <CMD>set conceallevel=0<CR>
 nnoremap <Leader>t <CMD>TableFormat<CR>
 nnoremap <Leader>b <CMD>WikiGraphFindBacklinks<CR>
 nnoremap <Leader>g <CMD>WikiGraphRelated<CR>
-nnoremap <Leader>f <CMD>Goyo<CR>
+nnoremap <leader>f :Goyo <bar> highlight StatusLineNC ctermfg=white<CR>:Limelight<CR>
 
 hi mkdHeading cterm=bold
 hi mkdH1 cterm=bold
@@ -118,5 +119,5 @@ inoremap [[ [[<C-x><C-o><C-p>
 inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
 inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 
-let g:latex_to_unicode_file_types = ['markdown']
+let g:latex_to_unicode_file_types = ['markdown', 'julia']
 let g:SuperTabDefaultCompletionType = '<c-n>'
