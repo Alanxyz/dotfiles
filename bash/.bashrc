@@ -44,15 +44,14 @@ alias gP="git pull"
 alias week="rem -c+1n"
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 
-DOCKERHOME="$HOME/DOCKER/" 
+DOCKERHOME="$HOME/CETERA/DOCKER/" 
 ALANHOME="$HOME/OMNIA/" 
 alias docker-anaconda="sudo docker run -it continuumio/anaconda3 /bin/bash"
 alias docker-julia="sudo docker run -it -v $DOCKERHOME:/root/ -v $ALANHOME:/root/OMNIA/ -p 1234:1234 julia bash"
 alias docker-wolfram="sudo docker run -it wolframresearch/wolframengine"
 
-lab="$HOME/OMNIA/SCIENTIA/LABORATORIVM" 
 dots="$HOME/.dotfiles" 
-codex="$HOME/OMNIA/PERSONALIS/CODEX" 
+codex="$HOME/OMNIA/REGIONES/PERSONALIS/CODEX" 
 
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:~/.dev/node/bin/

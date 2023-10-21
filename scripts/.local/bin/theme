@@ -222,12 +222,13 @@ sed -i "s/^color7 .*/color7 $WHITE/"                     $FILE
 sed -i "s/^color15 .*/color15 $LWHITE/"                  $FILE
 
 # VIM
-#
-#if [ $TYPE = "DARK" ]; then
-#    sed -i "s/background=.*/background=dark"
-#else
-#    sed -i "s/background=.*/background=light"
-#fi
+
+FILE="$HOME/.vimrc"
+if [ $TYPE = "DARK" ]; then
+    sed -i "s/background=.*/background=dark/g" $FILE
+else
+    sed -i "s/background=.*/background=light/g" $FILE
+fi
 
 ## XORG
 
