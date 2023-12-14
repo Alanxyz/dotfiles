@@ -43,6 +43,8 @@ alias gp="git push"
 alias gP="git pull"
 alias week="rem -c+1n"
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
+alias tmux-new="tmux new -s"
+alias tmux-load="tmux attach -t"
 
 DOCKERHOME="$HOME/CETERA/DOCKER/" 
 ALANHOME="$HOME/OMNIA/" 

@@ -60,7 +60,7 @@ nnoremap <Leader>e        <CMD>NERDTreeToggle<CR>
 
 " [Apariencia]
 
-set background=dark
+set background=light
 " set termguicolors
 colorscheme dim
 

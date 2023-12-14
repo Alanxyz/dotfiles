@@ -33,8 +33,8 @@ set completion-fg               "#eeeeee"
 set completion-highlight-fg     "#ffafd7"
 set completion-highlight-bg     "#303030"
 
-set recolor-lightcolor "#1d2021"
-set recolor-darkcolor "#d4be98"
+set recolor-lightcolor "#d4be98"
+set recolor-darkcolor "#1d2021"
 
-set recolor                     "true"
-set recolor-keephue             "false"
+set recolor                     "false"
+set recolor-keephue             "true"
