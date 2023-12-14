@@ -1,64 +1,55 @@
-
-Xft.antialias: true
-
-! special
-*.foreground: #eeeeee
-*.background: #303030
-*.cursorColor: #afd7ff
-
 ! black
-*.color0: #303030
-*.color8: #3f3939
+*.color0:       #111111
+*.color8:       #888888
 
 ! red
-*.color1: #ffafd7
-*.color9: #ffc8e3
+*.color1:       #63424b
+*.color9:       #63424b
 
 ! green
-*.color2: #afffd7
-*.color10: #c8ffe3
+*.color2:       #536872
+*.color10:      #536872
 
 ! yellow
-*.color3: #ffaf87
-*.color11: #ffc0a0
+*.color3:       #365b73
+*.color11:      #365b73
 
 ! blue
-*.color4: #afd7ff
-*.color12: #afd7ff
+*.color4:       #614051
+*.color12:      #614051
 
 ! magenta
-*.color5: #ffd7ff
-*.color13: #fff0ff
+*.color5:       #277050
+*.color13:      #277050
 
 ! cyan
-*.color6: #d7d7ff
-*.color14: #f0f0ff
+*.color6:       #9f4a9b
+*.color14:      #9f4a9b
 
 ! white
-*.color7: #eeeeee
-*.color15: #808080
+*.color7:       #f2f3f4
+*.color15:      #c5c8c6
 
-URxvt.saveline: 2048
-URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.iso14755: false
 
-URxvt.transparent: flase
-URxvt.shading: 55
-URxvt.blurRadius: 12
+!*.foreground:		#000000
+!*.background:		#eeeeee
+!*.cursorColor:		#9cd8e7
 
-URxvt*font: 		xft:Julia Mono:antialias=true Term:size=18
-URxvt*boldFont:		xft:Julia Mono:bold:size=18
-URxvt*italicFont:		xft:Julia Mono:italic:size=18
-URxvt*scrollBar: 	false
-URxvt*cursorUnderline:	false
+Xft.dpi:		96
+Xft.hinting:		1
+Xft.hintstyle:		hintlight
+Xft.antialias:		1
+Xft.rgba:		rgb
+
+URxvt.font:             xft:Iosevka Term:style=Regular:size=18
+URxvt.boldFont:         xft:Iosevka Term:style=Bold:size=18
+URxvt.italicFont:	xft:Iosevka Term:style=Italic:size=18
+URxvt.scrollBar:        false
+URxvt.iso14755:         false
+URxvt.internalBorder:   5
+URxvt.letterSpace:      0
+
 URxvt*cursorBlink:	true
-URxvt*depth: 32
-URxvt*lineSpace: 12
-URxvt*letterSpace: -1.5
-URxvt.internalBorder: 20
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-
-xterm*font:     *-fixed-*-*-*-18-*
