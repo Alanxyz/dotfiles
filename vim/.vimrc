@@ -75,7 +75,7 @@ let g:limelight_conceal_ctermfg = 8
 
 let g:vim_markdown_math          = 1
 let g:vim_markdown_frontmatter   = 1
-let g:wiki_root                  = '~/OMNIA/PERSONALIS/CODEX/'
+let g:wiki_root                  = '~/OMNIA/II/PERSONALIS/CODEX/'
 let g:wiki_link_toggle_on_follow = 0
 let g:wiki_journal               = { 'name': '' }
 let g:wiki_link_creation = {
