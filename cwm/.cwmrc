@@ -20,19 +20,23 @@ autogroup	4	gimp
 
 unbind-key	all
 
-bind-key	XF86MonBrightnessUp	"xbacklight -inc 10"
-bind-key	XF86MonBrightnessDown	"xbacklight -dec 10"
-bind-key	XF86AudioMute		"amixer set Master toggle"
-bind-key	XF86AudioRaiseVolume	"amixer set Master 2+"
-bind-key	XF86AudioLowerVolume	"amixer set Master 2-"
-bind-key	XF86Display		"scrot -q 100"
-bind-key	S-XF86Display		"scrot -q 100 -s"
+bind-key	4-b "brillo -A 10"
+bind-key	4S-b "brillo -U 10"
+bind-key	4C-b "redshift -O 4500K"
+bind-key	4SC-b "redshift -x"
+
+bind-key	4-m "amixer set Master toggle"
+bind-key	4-v "amixer set Master 2%+"
+bind-key	4S-v "amixer set Master 2%-"
+
+bind-key	4-s "scrot -q 100 -F /tmp/screenshot.png"
+bind-key	4S-s		"scrot -q 100 -s -F /tmp/screenshot.png"
 
 bind-key	4S-q		quit
 bind-key	4S-r		restart
 bind-key	4-p menu-exec
 bind-key	4-Return	urxvtc
-bind-key	4-v		"urxvtc -e vim"
+bind-key	4-n		"urxvtc -e vim"
 
 bind-key	4-1		group-only-1
 bind-key	4-2		group-only-2
