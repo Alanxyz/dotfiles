@@ -13,4 +13,4 @@ urxvtd -q -f -o &
 
 polybar -r &
 
-exec cwm
+exec spectrwm

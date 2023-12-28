@@ -42,7 +42,7 @@ set wildmenu
 set ignorecase
 set updatetime=300 shortmess+=c
 set wrap linebreak
-set expandtab tabstop=2 shiftwidth=2 smarttab
+set noexpandtab tabstop=8 shiftwidth=8 smarttab
 set autoindent
 set encoding=utf-8
 set nobackup nowritebackup noswapfile
