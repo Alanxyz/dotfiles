@@ -1,39 +1,23 @@
-! black
-*.color0:       #111111
-*.color8:       #888888
+*.foreground: #000
+*.background: #fff
+*.cursorColor: #000
 
-! red
-*.color1:       #63424b
-*.color9:       #63424b
-
-! green
-*.color2:       #536872
-*.color10:      #536872
-
-! yellow
-*.color3:       #365b73
-*.color11:      #365b73
-
-! blue
-*.color4:       #614051
-*.color12:      #614051
-
-! magenta
-*.color5:       #277050
-*.color13:      #277050
-
-! cyan
-*.color6:       #9f4a9b
-*.color14:      #9f4a9b
-
-! white
-*.color7:       #f2f3f4
-*.color15:      #c5c8c6
-
-
-!*.foreground:		#000000
-!*.background:		#eeeeee
-!*.cursorColor:		#9cd8e7
+*.color0: #000000
+*.color1: #990000
+*.color2: #00A600
+*.color3: #999900
+*.color4: #0000B2
+*.color5: #B200B2
+*.color6: #00A6B2
+*.color7: #BFBFBF
+*.color8: #666666
+*.color9: #E50000
+*.color10: #00D900
+*.color11: #E5E500
+*.color12: #0000FF
+*.color13: #E500E5
+*.color14: #00E5E5
+*.color15: #E5E5E5
 
 Xft.dpi:		96
 Xft.hinting:		1
@@ -46,7 +30,7 @@ URxvt.boldFont:         xft:Iosevka Term:style=Bold:size=18
 URxvt.italicFont:	xft:Iosevka Term:style=Italic:size=18
 URxvt.scrollBar:        false
 URxvt.iso14755:         false
-URxvt.internalBorder:   5
+URxvt.internalBorder:   20
 URxvt.letterSpace:      0
 
 URxvt*cursorBlink:	true

@@ -6,35 +6,14 @@ set statusbar-v-padding 0
 set page-padding 1
 set selection-clipboard clipboard
 
-set default-bg "#1d2021"
-set default-fg "#d4be98"
+set default-fg "#000"
+set default-bg "#fff"
 
-set statusbar-fg "#d4be98"
-set statusbar-bg "#1d2021"
+set highlight-color             "#282828"
+set highlight-active-color      "#ebdbb2"
 
-set inputbar-bg                 "#303030"
-set inputbar-fg                 "#eeeeee"
-
-set notification-bg             "#303030"
-set notification-fg             "#eeeeee"
-
-set notification-error-bg       "#303030"
-set notification-error-fg       "#eeeeee"
-
-set notification-warning-bg     "#303030"
-set notification-warning-fg     "#eeeeee"
-
-set highlight-color             "#ffafd7"
-set highlight-active-color      "#ffafd7"
-
-set completion-bg               "#303030"
-set completion-fg               "#eeeeee"
-
-set completion-highlight-fg     "#ffafd7"
-set completion-highlight-bg     "#303030"
-
-set recolor-lightcolor "#d4be98"
-set recolor-darkcolor "#1d2021"
+set recolor-darkcolor "#282828"
+set recolor-lightcolor "#ebdbb2"
 
 set recolor                     "false"
 set recolor-keephue             "true"
