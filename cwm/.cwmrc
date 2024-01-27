@@ -1,5 +1,5 @@
-color	activeborder	"#bebebe"
-color	inactiveborder	"#bebebe"
+color	activeborder	"#eee"
+color	inactiveborder	"#eee"
 color	font		"#000"
 color	selfont		"#fff"
 color	menubg		"#fff"
