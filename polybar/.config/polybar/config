@@ -17,10 +17,10 @@
 ;==========================================================
 
 [colors]
-background = #cc0D3440
-background-alt = #cc16325C
-foreground = #fff
-primary = #00a6b2
+background = #484848
+background-alt = #484848
+foreground = #ffffff
+primary = #ec5ca1
 
 [bar/example]
 width = 100%

@@ -33,7 +33,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias histmenu='$(cat ~/.bash_history | fzf)'
-alias files='xdg-open "`fzf --color=bw`"'
+alias ff='xdg-open "`fzf --color=bw`"'
 alias share="curl -F 'f:1=<-' ix.io"
 alias ga="git add"
 alias gs="git status"
@@ -41,19 +41,19 @@ alias gc="git commit -m"
 alias gC="git checkout -b"
 alias gp="git push"
 alias gP="git pull"
+alias gg="git log --graph --abbrev-commit --decorate --date=relative --all"
 alias week="rem -c+1n"
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 alias tmux-new="tmux new -s"
 alias tmux-load="tmux attach -t"
 
-DOCKERHOME="$HOME/CETERA/DOCKER/" 
+DOCKERHOME="$HOME/cetera/docker/" 
 ALANHOME="$HOME/OMNIA/" 
 alias docker-anaconda="sudo docker run -it continuumio/anaconda3 /bin/bash"
 alias docker-julia="sudo docker run -it -v $DOCKERHOME:/root/ -v $ALANHOME:/root/OMNIA/ -p 1234:1234 julia bash"
 alias docker-wolfram="sudo docker run -it wolframresearch/wolframengine"
 
 dots="$HOME/.dotfiles" 
-codex="$HOME/OMNIA/REGIONES/PERSONALIS/CODEX" 
 
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:~/.dev/node/bin/

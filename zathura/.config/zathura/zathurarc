@@ -7,7 +7,7 @@ set page-padding 1
 set selection-clipboard clipboard
 
 set default-fg "#000"
-set default-bg "#fff"
+set default-bg "#ffffff"
 
 set highlight-color             "#282828"
 set highlight-active-color      "#ebdbb2"
