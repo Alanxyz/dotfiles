@@ -74,12 +74,12 @@ let g:limelight_conceal_ctermfg = 8
 " [Documentos]
 
 let g:wiki_root                  = '~/codex/'
-let g:wiki_filetypes             = ['txt', 'md']
+let g:wiki_filetypes             = ['md']
 let g:wiki_link_toggle_on_follow = 0
 let g:wiki_journal               = { 'name': '' }
 let g:wiki_link_creation = {
-      \ 'txt': {
-      \   'link_type': 'txt',
+      \ 'md': {
+      \   'link_type': 'md',
       \   'url_extension': '',
       \ },
       \}
@@ -88,7 +88,7 @@ let s:tag_parser.re_match = '\v%(^|\s)#\zs[^# ]+'
 let s:tag_parser.re_findstart = '\v%(^|\s)#\zs[^# ]+'
 let s:tag_parser.make = {t, l -> empty(t) ? '' : join(map(t, '"#" . v:val'))}
 let g:wiki_tag_parsers = [s:tag_parser]
-let g:bullets_enabled_file_types = ['markdown', 'txt']
+let g:bullets_enabled_file_types = ['markdown']
 let g:bullets_outline_levels     = ['std*']
 
 nnoremap <Leader>s <CMD>set spell!<CR>
@@ -110,5 +110,5 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
 inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 
-let g:latex_to_unicode_file_types = ['text', 'julia']
+let g:latex_to_unicode_file_types = ['text', 'markdown', 'julia']
 let g:SuperTabDefaultCompletionType = '<c-n>'

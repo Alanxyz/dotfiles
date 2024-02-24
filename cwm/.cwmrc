@@ -37,10 +37,11 @@ bind-key	4S-s		"scrot -q 100 -s -F /tmp/screenshot.png"
 
 bind-key	4S-q		quit
 bind-key	4S-r		restart
-bind-key	4-p menu-exec
+bind-key	4-p   "rofi -show run"
+bind-key	4-o   "rofi -show file"
 bind-key	4-Return	urxvtc
 bind-key	4-n		"urxvtc -e vim -c :WikiIndex"
-bind-key	4S-n		"urxvtc -e vim -c :WikiJournal"
+bind-key	4S-n	"urxvtc -e vim -c :WikiJournal"
 
 bind-key	4-1		group-only-1
 bind-key	4-2		group-only-2
