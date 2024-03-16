@@ -19,9 +19,9 @@ Plug 'preservim/nerdtree'
 " Plug 'anufrievroman/vim-angry-reviewer'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lervag/wiki.vim'
-Plug 'lervag/wiki-ft.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'kyuhi/vim-emoji-complete'
+Plug 'brennier/quicktex'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
@@ -78,11 +78,11 @@ let g:wiki_filetypes             = ['md']
 let g:wiki_link_toggle_on_follow = 0
 let g:wiki_journal               = { 'name': '' }
 let g:wiki_link_creation = {
-      \ 'md': {
-      \   'link_type': 'md',
-      \   'url_extension': '',
-      \ },
-      \}
+                  \ 'md': {
+                  \   'link_type': 'md',
+                  \   'url_extension': '',
+                  \ },
+                  \}
 let s:tag_parser = deepcopy(g:wiki#tags#default_parser)
 let s:tag_parser.re_match = '\v%(^|\s)#\zs[^# ]+'
 let s:tag_parser.re_findstart = '\v%(^|\s)#\zs[^# ]+'

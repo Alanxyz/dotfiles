@@ -42,9 +42,9 @@ Xft.hintstyle:		hintlight
 Xft.antialias:		1
 Xft.rgba:		rgb
 
-URxvt.font:             xft:Iosevka Term:style=Regular:size=18
-URxvt.boldFont:         xft:Iosevka Term:style=Bold:size=18
-URxvt.italicFont:	xft:Iosevka Term:style=Italic:size=18
+URxvt.font:             xft:Iosevka Term:style=Regular:size=16
+URxvt.boldFont:         xft:Iosevka Term:style=Bold:size=16
+URxvt.italicFont:	xft:Iosevka Term:style=Italic:size=16
 URxvt.scrollBar:        false
 URxvt.iso14755:         false
 URxvt.internalBorder:   20
