@@ -22,6 +22,7 @@ Plug 'lervag/wiki.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'kyuhi/vim-emoji-complete'
 Plug 'brennier/quicktex'
+Plug 'jceb/vim-orgmode'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
