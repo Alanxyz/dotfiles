@@ -58,3 +58,18 @@ dots="$HOME/.dotfiles"
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:~/.dev/node/bin/
 PATH=$PATH:~/.yarn/bin/
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/alan/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/alan/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<

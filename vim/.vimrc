@@ -7,7 +7,6 @@
 call plug#begin('~/.vim/plugged')
 
 " Generales
-Plug 'noahfrederick/vim-noctu'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ervandew/supertab'
@@ -18,16 +17,15 @@ Plug 'preservim/nerdtree'
 " Escritura
 " Plug 'anufrievroman/vim-angry-reviewer'
 Plug 'JuliaEditorSupport/julia-vim'
-Plug 'lervag/wiki.vim'
-Plug 'dkarter/bullets.vim'
-Plug 'kyuhi/vim-emoji-complete'
+Plug 'vimwiki/vimwiki'
 Plug 'brennier/quicktex'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
-Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'kyuhi/vim-emoji-complete'
+Plug 'mattn/calendar-vim'
 
 call plug#end()
 
@@ -73,29 +71,12 @@ let g:limelight_conceal_ctermfg = 8
 
 " [Documentos]
 
-let g:wiki_root                  = '~/codex/'
-let g:wiki_filetypes             = ['md']
-let g:wiki_link_toggle_on_follow = 0
-let g:wiki_journal               = { 'name': '' }
-let g:wiki_link_creation = {
-                  \ 'md': {
-                  \   'link_type': 'md',
-                  \   'url_extension': '',
-                  \ },
-                  \}
-let s:tag_parser = deepcopy(g:wiki#tags#default_parser)
-let s:tag_parser.re_match = '\v%(^|\s)#\zs[^# ]+'
-let s:tag_parser.re_findstart = '\v%(^|\s)#\zs[^# ]+'
-let s:tag_parser.make = {t, l -> empty(t) ? '' : join(map(t, '"#" . v:val'))}
-let g:wiki_tag_parsers = [s:tag_parser]
-let g:bullets_enabled_file_types = ['markdown']
-let g:bullets_outline_levels     = ['std*']
+let g:vimwiki_list = [{'path': '~/codex/',
+                      \ 'syntax': 'markdown', 'ext': 'md'}]
 
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
-nnoremap <Leader>b <CMD>WikiGraphFindBacklinks<CR>
-nnoremap <Leader>g <CMD>WikiGraphRelated<CR>
 nnoremap <leader>f :Goyo <bar> highlight StatusLineNC ctermfg=white<CR>:Limelight<CR>
 
 hi clear SpellBad
@@ -110,5 +91,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
 inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 
-let g:latex_to_unicode_file_types = ['text', 'markdown', 'julia']
+let g:latex_to_unicode_file_types = ['text', 'markdown', 'vimwiki', 'julia']
 let g:SuperTabDefaultCompletionType = '<c-n>'
+
+

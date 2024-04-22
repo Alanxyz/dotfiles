@@ -139,12 +139,9 @@ let g:quicktex_math = {
     \'tprod' : '\otimes ',
     \
 \'Section: Delimiters' : 'COMMENT',
-    \'bpara' : '\left( <+++> \right) <++>',
+    \'bpa' : '\pa{ <+++> } <++>',
     \'pa'  : '(<+++>) <++>',
-    \'bsb'   : '\left[ <+++> \right] <++>',
-    \'sb'    : '[<+++>] <++>',
-    \'bbra'  : '\left\{ <+++> \right\} <++>',
-    \'bra'   : '\{<+++>\} <++>',
+    \'bbr'   : '\br{ <+++> } <++>',
     \
 \'Section: Group Theory' : 'COMMENT',
     \'sdp'   : '\rtimes ',
