@@ -19,6 +19,7 @@ Plug 'preservim/nerdtree'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'brennier/quicktex'
+Plug 'jceb/vim-orgmode'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'

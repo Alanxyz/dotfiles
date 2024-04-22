@@ -197,7 +197,7 @@ let g:quicktex_math = {
     \'hat'  : "\<ESC>Bi\\hat{\<ESC>Els} ",
     \'dot'  : "\<ESC>Bi\\dot{\<ESC>Els} ",
     \'bar'  : "\<ESC>Bi\\overline{\<ESC>Els} ",
-    \'tild'  : "\<ESC>Bi\\tild{\<ESC>Els} ",
+    \'tilde': "\<ESC>Bi\\tilde{\<ESC>Els} ",
     \'vec'  : "\<ESC>Bi\\vec{\<ESC>Els} ",
     \'star'  : "\<BS>^* ",
     \
