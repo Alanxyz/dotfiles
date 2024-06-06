@@ -73,3 +73,4 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+XDG_RUNTIME_DIR=/run/user/$(id -u)

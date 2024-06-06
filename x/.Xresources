@@ -1,39 +1,39 @@
 ! special
-*.foreground:   #000000
-*.background:   #ffffff
-*.cursorColor:  #000000
+*.foreground:   #d1d1d1
+*.background:   #000000
+*.cursorColor:  #d1d1d1
 
 ! black
-*.color0:       #363636
-*.color8:       #838383
+*.color0:       #232323
+*.color8:       #848484
 
 ! red
-*.color1:       #dc322f
-*.color9:       #dc322f
+*.color1:       #c7ae95
+*.color9:       #c7ae95
 
 ! green
-*.color2:       #859900
-*.color10:      #859900
+*.color2:       #95c7ae
+*.color10:      #95c7ae
 
 ! yellow
-*.color3:       #b58900
-*.color11:      #b58900
+*.color3:       #aec795
+*.color11:      #aec795
 
 ! blue
-*.color4:       #268bd2
-*.color12:      #268bd2
+*.color4:       #ae95c7
+*.color12:      #ae95c7
 
 ! magenta
-*.color5:       #6c71c4
-*.color13:      #6c71c4
+*.color5:       #c795ae
+*.color13:      #c795ae
 
 ! cyan
-*.color6:       #2aa198
-*.color14:      #2aa198
+*.color6:       #95aec7
+*.color14:      #95aec7
 
 ! white
-*.color7:       #ebebeb
-*.color15:      #fdfdfd
+*.color7:       #d1d1d1
+*.color15:      #f5f5f5
 
 
 Xft.dpi:		96
@@ -47,11 +47,11 @@ URxvt.boldFont:         xft:Iosevka Term:style=Bold:size=16
 URxvt.italicFont:	xft:Iosevka Term:style=Italic:size=16
 URxvt.scrollBar:        false
 URxvt.iso14755:         false
+URxvt.iso14755_52: false
 URxvt.internalBorder:   20
-URxvt.letterSpace:      0
+URxvt*letterSpace: -1
+URxvt*lineSpace: 8
 
 URxvt*cursorBlink:	true
 
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-URxvt.perl-ext-common: "default, -searchable-scrollback"
+URxvt.perl-ext-common: "default"

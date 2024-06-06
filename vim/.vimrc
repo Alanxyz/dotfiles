@@ -19,7 +19,6 @@ Plug 'preservim/nerdtree'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'brennier/quicktex'
-Plug 'jceb/vim-orgmode'
 
 " Opcionales
 Plug 'tomasiser/vim-code-dark'
@@ -59,7 +58,7 @@ nnoremap <Leader>e        <CMD>NERDTreeToggle<CR>
 
 " [Apariencia]
 
-set background=light
+set background=dark
 " set termguicolors
 colorscheme dim
 
@@ -72,8 +71,11 @@ let g:limelight_conceal_ctermfg = 8
 
 " [Documentos]
 
-let g:vimwiki_list = [{'path': '~/codex/',
-                      \ 'syntax': 'markdown', 'ext': 'md'}]
+let g:vimwiki_list = [{
+                      \ 'path': '~/omnia/areae/codex/',
+                      \ 'syntax': 'markdown', 'ext': 'md',
+                      \ 'path_html': '~/cetera/notes/',
+                      \ 'custom_wiki2html': '~/omnia/areae/codex/.utils/export.sh'}]
 
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
@@ -92,7 +94,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
 inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 
-let g:latex_to_unicode_file_types = ['text', 'markdown', 'vimwiki', 'julia']
+let g:latex_to_unicode_file_types = ['text', 'markdown', 'vimwiki', 'julia', 'python']
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
