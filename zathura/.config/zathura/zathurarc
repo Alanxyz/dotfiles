@@ -6,16 +6,16 @@ set statusbar-v-padding 0
 set page-padding 1
 set selection-clipboard clipboard
 
-set default-fg "#ffffff"
-set default-bg "#000000"
+set default-fg "#5A4534"
+set default-bg "#ffffff"
 
-set highlight-color             "#282828"
-set highlight-active-color      "#ebdbb2"
+set highlight-color             "#b58900"
+set highlight-active-color      "#b58900"
 
 #set recolor-darkcolor "#282828"
 #set recolor-lightcolor "#ebdbb2"
-set recolor-darkcolor "#eeeeee"
-set recolor-lightcolor "#000000"
+set recolor-darkcolor "#5A4534"
+set recolor-lightcolor "#ffffff"
 
 set recolor                     "true"
 set recolor-keephue             "true"
