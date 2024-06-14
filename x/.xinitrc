@@ -10,6 +10,7 @@ sleep 1 && picom &
 dunst &
 urxvtd -q -f -o &
 
+polybar -r &
 syncthing --no-browser &
 
 exec spectrwm
