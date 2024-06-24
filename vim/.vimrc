@@ -58,7 +58,7 @@ nnoremap <Leader>e        <CMD>NERDTreeToggle<CR>
 
 " [Apariencia]
 
-set background=dark
+set background=light
 " set termguicolors
 colorscheme dim
 
@@ -95,6 +95,7 @@ inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
 inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 
 let g:latex_to_unicode_file_types = ['text', 'markdown', 'vimwiki', 'julia', 'python']
+let g:quicktex_math_filetypes = ['tex', 'pandoc', 'markdown', 'vimwiki']
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
