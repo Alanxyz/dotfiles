@@ -16,8 +16,9 @@ Plug 'preservim/nerdtree'
 
 " Escritura
 " Plug 'anufrievroman/vim-angry-reviewer'
+" Plug 'vimwiki/vimwiki'
+Plug 'lervag/wiki.vim'
 Plug 'JuliaEditorSupport/julia-vim'
-Plug 'vimwiki/vimwiki'
 Plug 'brennier/quicktex'
 
 " Opcionales
@@ -58,7 +59,7 @@ nnoremap <Leader>e        <CMD>NERDTreeToggle<CR>
 
 " [Apariencia]
 
-set background=light
+set background=dark
 " set termguicolors
 colorscheme dim
 
@@ -67,23 +68,44 @@ set fillchars=fold:\
 hi Folded guibg=NONE
 
 set conceallevel=0
+let g:vimwiki_list = [{'path': '~/OMNIA/areae/codex/',
+                      \ 'syntax': 'markdown', 'ext': 'md'}]
 let g:limelight_conceal_ctermfg = 8
-
-" [Documentos]
-
-let g:vimwiki_list = [{
-                      \ 'path': '~/omnia/areae/codex/',
-                      \ 'syntax': 'markdown', 'ext': 'md',
-                      \ 'path_html': '~/cetera/notes/',
-                      \ 'custom_wiki2html': '~/omnia/areae/codex/.utils/export.sh'}]
-
+let g:vim_markdown_math = 1
+let g:wiki_root = '~/OMNIA/areae/codex'
+let g:wiki_export = {
+      \ 'args' : '',
+      \ 'from_format' : 'markdown',
+      \ 'ext' : 'pdf',
+      \ 'link_ext_replace': v:false,
+      \ 'view' : v:true,
+      \ 'output': fnamemodify(tempname(), ':h'),
+      \}
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
 nnoremap <leader>f :Goyo <bar> highlight StatusLineNC ctermfg=white<CR>:Limelight<CR>
 
+function! NewNote()
+  let timestamp = strftime("%Y%m%d%H%M%S")
+  let new_filename = timestamp . ".md"
+  execute 'edit ' . new_filename
+endfunction
+nnoremap <leader>wne :call NewNote()<CR>
+
+function! ReNote()
+  let current_file = expand('%:t:r')
+  let timestamp = strftime("%Y%m%d%H%M%S")
+  let new_filename = timestamp . ".md"
+  let response_text = "Re: [[" . current_file .  "]]\n\n\n\n#hilos\n"
+  execute 'edit ' . new_filename
+  call append(0, split(response_text, '\n'))
+endfunction
+nnoremap <leader>wre :call ReNote()<CR>3k
+
 hi clear SpellBad
 hi SpellBad cterm=italic
+hi Conceal ctermbg=none
 
 " [Escritura]
 

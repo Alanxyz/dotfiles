@@ -76,15 +76,8 @@ let g:quicktex_math = {
     \'Psi'     : '\Psi ',
     \
 \'Section: Set Theory' : 'COMMENT',
-    \'bn'    : '\mathbb{N} ',
-    \'bz'    : '\mathbb{Z} ',
-    \'bq'    : '\mathbb{Q} ',
-    \'br'    : '\mathbb{R} ',
-    \'bc'    : '\mathbb{C} ',
-    \'ba'    : '\mathbb{A} ',
-    \'bf'    : '\mathbb{F} ',
-    \'R'    : '\R ',
-    \'Rn'    : '\R^n ',
+    \'R'    : '\mathbb{R} ',
+    \'Rn'    : '\mathbb{R}^n ',
     \'subs'  : '\subseteq ',
     \'in'    : '\in ',
     \'nin'   : '\not\in ',
@@ -178,6 +171,7 @@ let g:quicktex_math = {
     \'sfour'  : "\<BS>_4 ",
     \'text'   : '\text{<+++>} <++>',
     \'rm'   : '\mathrm{<+++>} <++>',
+    \'bb'   : '\mathbb{<+++>} <++>',
     \
 \'Section: Fancy Variables' : 'COMMENT',
     \'fA' : '\mathcal{A} ',
@@ -197,6 +191,7 @@ let g:quicktex_math = {
 \'Section: Encapsulating keywords' : 'COMMENT',
     \'s'    : "\<ESC>Bi\\\<ESC>Els ",
     \'ss'    : "\<ESC>Bi\\\<ESC>Els{<+++>} <++>",
+    \'env' : "\<ESC>Bvedi\\begin{\<ESC>pa}\<CR><+++>\<CR>\\end{\<ESC>pa}",
     \'hat'  : "\<ESC>Bi\\hat{\<ESC>Els} ",
     \'dot'  : "\<ESC>Bi\\dot{\<ESC>Els} ",
     \'bar'  : "\<ESC>Bi\\overline{\<ESC>Els} ",
@@ -246,10 +241,10 @@ let g:quicktex_math = {
 
 " LaTeX Mode Keywords {{{
 
-let g:quicktex_vimwiki = {
+let g:quicktex_markdown = {
     \' ' : "\<ESC>:call quicktex#DoJump()\<CR>",
     \'m' : '$<+++>$ <++>',
-    \'eq' : "$$\<CR><+++>\<CR>$$\<CR><++>",
+    \'eq' : '$$ <+++> $$<++>',
     \'it' : '_<+++>_ <++>',
     \
 \}
