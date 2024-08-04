@@ -67,20 +67,12 @@ set foldtext='‣'
 set fillchars=fold:\ 
 hi Folded guibg=NONE
 
-set conceallevel=0
+set conceallevel=3
 let g:vimwiki_list = [{'path': '~/OMNIA/areae/codex/',
                       \ 'syntax': 'markdown', 'ext': 'md'}]
 let g:limelight_conceal_ctermfg = 8
 let g:vim_markdown_math = 1
 let g:wiki_root = '~/OMNIA/areae/codex'
-let g:wiki_export = {
-      \ 'args' : '',
-      \ 'from_format' : 'markdown',
-      \ 'ext' : 'pdf',
-      \ 'link_ext_replace': v:false,
-      \ 'view' : v:true,
-      \ 'output': fnamemodify(tempname(), ':h'),
-      \}
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
@@ -102,6 +94,8 @@ function! ReNote()
   call append(0, split(response_text, '\n'))
 endfunction
 nnoremap <leader>wre :call ReNote()<CR>3k
+nnoremap <leader>we :WikiExport<CR>
+nnoremap <leader>wE :WikiExport -view<CR>
 
 hi clear SpellBad
 hi SpellBad cterm=italic
@@ -110,14 +104,11 @@ hi Conceal ctermbg=none
 " [Escritura]
 
 set spelllang=es
-
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-inorea DATE <C-R>=strftime('%Y-%m-%d')<CR>
-inorea NOW <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
+ia DATE <C-R>=strftime('%Y-%m-%d')<CR>
+ia NOW <C-R>=strftime('%H:%M')<CR>
 
 let g:latex_to_unicode_file_types = ['text', 'markdown', 'vimwiki', 'julia', 'python']
 let g:quicktex_math_filetypes = ['tex', 'pandoc', 'markdown', 'vimwiki']
 let g:SuperTabDefaultCompletionType = '<c-n>'
-
-
