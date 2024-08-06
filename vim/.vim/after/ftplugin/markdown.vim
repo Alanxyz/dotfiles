@@ -76,15 +76,8 @@ let g:quicktex_math = {
     \'Psi'     : '\Psi ',
     \
 \'Section: Set Theory' : 'COMMENT',
-    \'bn'    : '\mathbb{N} ',
-    \'bz'    : '\mathbb{Z} ',
-    \'bq'    : '\mathbb{Q} ',
-    \'br'    : '\mathbb{R} ',
-    \'bc'    : '\mathbb{C} ',
-    \'ba'    : '\mathbb{A} ',
-    \'bf'    : '\mathbb{F} ',
-    \'R'    : '\R ',
-    \'Rn'    : '\R^n ',
+    \'R'    : '\mathbb{R} ',
+    \'Rn'    : '\mathbb{R}^n ',
     \'subs'  : '\subseteq ',
     \'in'    : '\in ',
     \'nin'   : '\not\in ',
@@ -155,7 +148,7 @@ let g:quicktex_math = {
     \'to'     : '\to ',
     \'mapsto' : '\mapsto ',
     \'longmapsto' : '\longmapsto ',
-    \'longto' : '\longto ',
+    \'longto' : '\longrightarrow',
     \'comp'   : '\circ ',
     \'of'     : "\<BS>(<+++>) <++>",
     \'sin'    : '\sin ',
@@ -172,12 +165,20 @@ let g:quicktex_math = {
     \
 \'Section: LaTeX commands' : 'COMMENT',
     \'sub'    : "\<BS>_{<+++>} <++>",
+    \'si'   : "\<BS>_i ",
+    \'sj'   : "\<BS>_j ",
+    \'sk'   : "\<BS>_k ",
+    \'sn'   : "\<BS>_n ",
+    \'pj'   : "\<BS>^j ",
+    \'pk'   : "\<BS>^k ",
+    \'pn'   : "\<BS>^n ",
     \'sone'   : "\<BS>_1 ",
     \'stwo'   : "\<BS>_2 ",
     \'sthree' : "\<BS>_3 ",
     \'sfour'  : "\<BS>_4 ",
     \'text'   : '\text{<+++>} <++>',
     \'rm'   : '\mathrm{<+++>} <++>',
+    \'bb'   : '\mathbb{<+++>} <++>',
     \
 \'Section: Fancy Variables' : 'COMMENT',
     \'fA' : '\mathcal{A} ',
@@ -197,6 +198,7 @@ let g:quicktex_math = {
 \'Section: Encapsulating keywords' : 'COMMENT',
     \'s'    : "\<ESC>Bi\\\<ESC>Els ",
     \'ss'    : "\<ESC>Bi\\\<ESC>Els{<+++>} <++>",
+    \'env' : "\<ESC>Bvedi\\begin{\<ESC>pa}\<CR><+++>\<CR>\\end{\<ESC>pa}",
     \'hat'  : "\<ESC>Bi\\hat{\<ESC>Els} ",
     \'dot'  : "\<ESC>Bi\\dot{\<ESC>Els} ",
     \'bar'  : "\<ESC>Bi\\overline{\<ESC>Els} ",
@@ -224,7 +226,8 @@ let g:quicktex_math = {
     \
 \'Section: Operators' : 'COMMENT',
     \'int'    : '\int <+++> d <++>',
-    \'map'    : '<+++>: <++>\longto <++>',
+    \'map'    : '<+++>: <++>\longrightarrow <++>',
+    \'fullmap'    : '<+++>: <++>\longrightarrow <++> : <++> \longmapsto <++>',
     \'dv'     : '\frac{d <+++>}{d <++>} <++>',
     \'pdv'     : '\frac{\partial <+++>}{\partial <++>} <++>',
     \'lim'    : '\lim_{<+++>} <++>',
@@ -246,10 +249,10 @@ let g:quicktex_math = {
 
 " LaTeX Mode Keywords {{{
 
-let g:quicktex_vimwiki = {
+let g:quicktex_markdown = {
     \' ' : "\<ESC>:call quicktex#DoJump()\<CR>",
     \'m' : '$<+++>$ <++>',
-    \'eq' : "$$\<CR><+++>\<CR>$$\<CR><++>",
+    \'eq' : '$$ <+++> $$<++>',
     \'it' : '_<+++>_ <++>',
     \
 \}
