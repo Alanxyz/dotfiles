@@ -56,7 +56,7 @@ alias docker-wolfram="sudo docker run -it wolframresearch/wolframengine"
 dots="$HOME/.dotfiles" 
 
 PATH=$PATH:~/.local/bin/
-PATH=$PATH:~/.dev/node/bin/
+PATH=$PATH:~/cetera/apps/node/bin/
 PATH=$PATH:~/.yarn/bin/
 
 # >>> juliaup initialize >>>

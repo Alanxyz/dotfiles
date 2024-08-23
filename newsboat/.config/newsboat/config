@@ -45,11 +45,12 @@ macro t set browser "w3m %u" ; open-in-browser ; set browser "firefox %u"
 
 text-width 80
 
-# color listnormal black default
-# color listfocus cyan default bold
-# color listnormal_unread default default
-# color listfocus_unread cyan default bold
-# color info black white bold
-# color article default default 
+color listnormal default default
+color listfocus_unread default default bold
+color listfocus default default bold
+color listnormal_unread default default
+color info black white bold
+color article default default 
 
 feedlist-format "%n %t"
+articlelist-format "%n %t"
