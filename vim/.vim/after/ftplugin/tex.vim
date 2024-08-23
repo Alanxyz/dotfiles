@@ -137,6 +137,7 @@ let g:quicktex_math = {
     \'tprod' : '\otimes ',
     \
 \'Section: Delimiters' : 'COMMENT',
+    \'ke' : '{<+++>} <++>',
     \'bpa' : '\pa{ <+++> } <++>',
     \'pa'  : '(<+++>) <++>',
     \'bbr'   : '\br{ <+++> } <++>',
@@ -189,9 +190,11 @@ let g:quicktex_math = {
     \'fb' : '\mathcal{B} ',
     \'fl' : '\mathcal{L} ',
     \'fv' : '\mathcal{V} ',
+    \'fj' : '\mathcal{J} ',
     \
 \'Section: Encapsulating keywords' : 'COMMENT',
     \'s'    : "\<ESC>Bi\\\<ESC>Els ",
+    \'ss'    : "\<ESC>Bi\\{\<ESC>Els} ",
     \'env' : "\<ESC>Bvedi\\begin{\<ESC>pa}\<CR><+++>\<CR>\\end{\<ESC>pa}",
     \'hat'  : "\<ESC>Bi\\hat{\<ESC>Els} ",
     \'dot'  : "\<ESC>Bi\\dot{\<ESC>Els} ",
@@ -203,8 +206,6 @@ let g:quicktex_math = {
     \'star'  : "\<BS>^* ",
     \
 \'Section: Linear Algebra' : 'COMMENT',
-    \'GL'     : '\text{GL} ',
-    \'SL'     : '\text{SL} ',
     \'com'    : "\<BS>^c ",
     \'matrix' : "\<CR>\\begin{bmatrix}\<CR><+++>\<CR>\\end{bmatrix}\<CR><++>",
     \'vdots'  : '\vdots & ',

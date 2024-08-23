@@ -68,11 +68,11 @@ set fillchars=fold:\
 hi Folded guibg=NONE
 
 set conceallevel=3
-let g:vimwiki_list = [{'path': '~/OMNIA/areae/codex/',
+let g:vimwiki_list = [{'path': '~/omnia/areae/codex/',
                       \ 'syntax': 'markdown', 'ext': 'md'}]
 let g:limelight_conceal_ctermfg = 8
 let g:vim_markdown_math = 1
-let g:wiki_root = '~/OMNIA/areae/codex'
+let g:wiki_root = '~/omnia/areae/codex'
 nnoremap <Leader>s <CMD>set spell!<CR>
 nnoremap <Leader>c <CMD>set conceallevel=2<CR>
 nnoremap <Leader>C <CMD>set conceallevel=0<CR>
